@@ -6,6 +6,7 @@ public class Demo {
 		System.out.println("kayum");
 		System.out.println("ansari");
 		System.out.println("dev");
+		System.out.println("merge");
 		
 	}
 
