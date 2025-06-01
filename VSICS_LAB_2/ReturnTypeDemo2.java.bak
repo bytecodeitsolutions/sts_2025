@@ -1,0 +1,45 @@
+class ReturnTypeDemo2 
+{
+	boolean flag=false;
+	static float fee=100000.0f;
+	
+	static float m5(){
+		return fee;
+	}
+	
+	static String  m1(){
+		return "kayum ansari";
+	}
+	
+	static double m2(double  d){
+		return d;
+	}
+	
+	
+	
+	boolean  m3(){
+		return flag;
+	}
+	
+	static int  m4(){
+		int  a=100;
+		return a;
+	}
+	
+	
+	public static void main(String[] args) 
+	{
+		String  s1=ReturnTypeDemo2.m1();
+		double  d=ReturnTypeDemo2.m2();
+		ReturnTypeDemo2 obj=new ReturnTypeDemo2();
+		boolean b=obj.m3();
+		int  x=ReturnTypeDemo2.m4();
+		float  y=ReturnTypeDemo2.m5();
+		
+		System.out.println(s1);
+		System.out.println(d);
+		System.out.println(b);
+		System.out.println(x);
+		System.out.println(y);
+	}
+}
