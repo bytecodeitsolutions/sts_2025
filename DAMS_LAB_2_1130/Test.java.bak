@@ -55,9 +55,9 @@ methodname(); [only within same class]
 
 class Test
 {
-	static  int  a=10;
+	static  int  a;
 	        int  b=20;
-	static  Test t1=null;
+	static  Test t1;
 			
 	static void  method1(){
 		int  d=30;
@@ -72,6 +72,7 @@ class Test
 		System.out.println(b);
 	}
 	public static void main(String[]  args){
+		a=10;
 		t1=new Test();
 		t1.b=200;
 		Test.method1();

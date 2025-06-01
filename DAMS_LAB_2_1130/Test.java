@@ -72,7 +72,7 @@ class Test
 		System.out.println(b);
 	}
 	public static void main(String[]  args){
-		a=10;
+		
 		t1=new Test();
 		t1.b=200;
 		Test.method1();
