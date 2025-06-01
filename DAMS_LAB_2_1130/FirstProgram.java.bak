@@ -1,0 +1,10 @@
+class FirstProgram 
+{
+	 public static void Main(String[] args){
+		 for (String x:args )
+		 {
+			 System.out.println(x);
+		 }
+		 
+	 }
+}

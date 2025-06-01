@@ -1,0 +1,145 @@
+/*
+   class | design | blueprint | template | model
+   -----------------------------------------------
+   Syntax to define class
+   =======================
+   class  DesignName{
+     
+	 //properties====data=====variables======?
+	 //functionalities===methods====functions=====?
+   
+   }
+   
+   ****************************************************
+   
+   Syntax to define variable:
+   --------------------------
+   
+   datatype  variableName;
+   
+   int       rollNumber;
+   
+   datatype  variableName=value;
+   
+   
+   Question:- datatype--???--->why data type--->types of data
+              variable==??  ---->Why variable -->types of variables--?
+			  value--->literals===>types of literals?
+			  int  a=10;
+			  int  b=010;
+			  
+			  reserved words====?
+			  Identifiers======?
+			  
+			  
+			  
+			  +++++++++++++++++++++++++++++++++++++++++++++++++++++
+			  
+			     Data type  [size and type of dabba]
+				    |-Primitive data type
+					    |-Numeric 
+						   |-integral  (1,2,3,4,5,) (size in Byte)
+						       |-byte  -1====8 =-128 to 127
+							   |-short -2====16= -32768 to 32767
+							  ** |-int   -4====32 = -2147483648 to 2147483647
+							   |-long  -8====64
+						   |-floating  (0.0 , 1.2 , 3.0 , 4.5)
+						       |-float  ==4  (accuracy 6 to 7) 1.23456789089877
+							  ** |-double ==8  (accuracy 15 to 16)
+						|-non numeric
+						       |-boolean :- 1 Byte =>true , false
+							   |-char :- 2 => 0 to 65535
+					|-Non primitive
+					    |-class
+						|-interface
+						|-enum
+						|-array
+	
+					
+					byte data type:
+					---------------
+					size= 1 Byte == 8 bits--1
+					2<sup>7=128-1=127
+					-2<sup>7= -128
+					
+*/
+
+//Ex-
+
+class Fan
+{
+	
+	
+}
+
+class TubeLight
+{
+	
+	
+}
+
+class Chair
+{
+	
+}
+
+class Table
+{
+	
+}
+
+class Computer
+{
+	
+}
+class  Car
+{
+	
+}
+
+
+class Engine
+{
+	
+}
+
+class Tank
+{
+	
+}
+
+//======================
+
+class Doctor
+{
+	
+}
+
+class Patient
+{
+	
+}
+
+class Manager
+{
+	
+}
+
+class Admin
+{
+	
+}
+
+class Customer
+{
+	
+}
+
+class Employee
+{
+	 public static void  main(String[] args){
+	
+		char  x='10';
+		System.out.println(x);
+	 }
+}

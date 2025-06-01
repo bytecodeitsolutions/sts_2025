@@ -1,0 +1,73 @@
+/*
+
+class  ClassName{
+
+     //data--?   datatype  variableName;
+	 //method--?
+}
+*/
+class Customer 
+{
+	//void returntype and login is methodname
+	void  login(){
+		//business logic
+		System.out.println("you have logged in successfully");
+	}
+	
+	public static void main(String[]  args){
+		Customer c1=new Customer();//c1->object_reference_variable [local variable]
+		c1.login(); //non static method calling from c1 customer
+	}
+}
+/*
+    Why methods?
+	
+	Syntax to define method:
+	--------------------------
+	
+	returntype  methodName(){
+	
+	}
+	
+	void  sum(){
+	
+	}
+	
+	void  div(){
+	
+	}
+	
+	void login(){
+	
+	}
+	
+	void logout(){
+	
+	}
+	
+	void playMusic(){
+	
+	}
+	
+	======================
+	
+	types of method:
+	----------------
+	
+	static method
+	non static method
+	
+	with parameter method
+	without parameter method
+	
+	void returntype method
+	non void returntype method
+	
+	predefined method
+	user defined method
+	
+	var-arg method
+	
+	=======================================
+	
+*/

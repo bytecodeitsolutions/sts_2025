@@ -1,0 +1,15 @@
+class MethodCalling 
+{
+	int   a=10;
+	static int  b=20;
+	public static void main(String[] args) 
+	{
+		MethodCalling  obj=new MethodCalling();
+		MethodCalling  obj1=new MethodCalling();
+		
+		obj1.a=100;
+		obj1.b=200;
+		
+		System.out.println(obj.a+obj.b);
+	}
+}

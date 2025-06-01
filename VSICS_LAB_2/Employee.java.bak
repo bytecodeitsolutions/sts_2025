@@ -5,9 +5,7 @@ class Employee
 	String empName;
 	double empSalary;
 	
-	void m1(){
-		
-	}
+	
 	void getEmpDetails(){
 		System.out.println("================="+hashCode());
 		System.out.println("Employee id is="+empId);
