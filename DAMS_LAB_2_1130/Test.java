@@ -1,0 +1,81 @@
+/*
+class  ClassName
+{
+	 //data
+	 //datatype  dataname;
+	   // |-static         ==>static  int  a; //single  ==>ClassName , objref
+		//|-non static     ==>        int  b; //seperate==>objref
+		
+	 //method
+	    // |-static         ==> 
+		//static void  m1(int  d){ 
+		     //int  c; //c and d both are local variable-->method execution
+		//}
+		//single  ==>ClassName , objref
+		// |-non static     ==>          void  m2(){  } //seperate==>objref
+}
+
+Type of methods:
+------------------
+why??
+How??
+
+returntype  methodName(){
+
+}
+
+returntype===??  ==>void
+methodname===?? ===>drink , smoke , sleep , 
+
+ex:
+void  drink(){
+
+}
+
+void  sum(){
+
+}
+
+obj.methodName();
+
+static method
+===============
+syntax:
+
+static void  div(){
+
+}
+
+ClassName.methodName();
+obj.methodname();
+methodname(); [only within same class]
+
+
+*/
+
+class Test
+{
+	static  int  a;
+	        int  b=20;
+	static  Test t1;
+			
+	static void  method1(){
+		int  d=30;
+		System.out.println(a);
+		System.out.println(t1.b);
+		System.out.println(d);
+	}
+	
+	void method2(){
+		System.out.println("non static method2");
+		System.out.println(a);
+		System.out.println(b);
+	}
+	public static void main(String[]  args){
+		a=10;
+		t1=new Test();
+		t1.b=200;
+		Test.method1();
+		t1.method2();
+	}
+}
