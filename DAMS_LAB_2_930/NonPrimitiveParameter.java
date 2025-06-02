@@ -46,5 +46,6 @@ class  NonPrimitiveParameter
 		
 		StudentLoginSystem  obj=new StudentLoginSystem();
 		obj.login(s1);
+		
 	}
 }

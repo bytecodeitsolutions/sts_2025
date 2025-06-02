@@ -7,7 +7,12 @@ class Student
 	long contact;
 	
 	void viewStudentData(Student x){
-		System.out.println(x);
+		System.out.println(x.id);
+		System.out.println(x.userName);
+		System.out.println(x.password);
+		System.out.println(x.contact);
+		System.out.println(x.address);
+		
 	}
 	
 	void isValidStudent(Student  s){

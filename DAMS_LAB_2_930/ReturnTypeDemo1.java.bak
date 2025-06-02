@@ -1,0 +1,25 @@
+/*
+   ReturnType:
+   
+   void return type method
+   non void return type method
+      (byte , short , int , long , float , double , boolean , char)
+	  String
+	  Non primitive
+*/
+
+
+class  ReturnTypeDemo1
+{
+	String   sum(int  a, double  b){
+		int  c=a+b;
+		System.out.println(c);
+		return "values are added "+c;
+	}
+	public static void main(String[] args) 
+	{
+		ReturnTypeDemo1  obj=new ReturnTypeDemo1();
+		String  x=obj.sum(100,200);
+		System.out.println(x);
+	}
+}
