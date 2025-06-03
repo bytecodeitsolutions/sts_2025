@@ -81,6 +81,7 @@ class DataHiding
 		
 		Customer  c1=new Customer();
 		Customer  c2=new Customer();
+		
 		c1.setName("Kayum");
 		c2.setName("Rani");
 		c2.checkBalance(a2);

@@ -1,3 +1,39 @@
+/*
+  class
+  object
+  method
+  variable
+  
+  =============
+  syntax for class:
+  ------------------------------------------
+  class  ClassName{
+  
+  }
+  ==========================================
+  object syntax:
+  ---------------
+  ClassName  obj_ref_variable=new ClassName();
+  
+  ------------------------------------------
+  Syntax for method:
+  
+  returntype  methodName(){
+  
+  }
+  
+  ============================================
+  
+  variable syntax:
+  
+  datatype  variableName;
+  
+  ==============================================
+  
+  
+  
+  
+*/
 class Account
 {
 	private long accountNumber;
