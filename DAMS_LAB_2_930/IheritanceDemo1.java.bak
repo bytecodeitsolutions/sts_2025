@@ -1,0 +1,70 @@
+/*
+   Inheritance:
+   ------------
+     Why???===============>Reusability
+	 How??? ================>by using extends
+	 
+	 ===============================================
+	 
+	 
+*/
+
+class Parent //extends Object
+{
+	 String  name;
+	 String  address;
+	 
+	 void  getData(){
+		 System.out.println(name +"  "+address);
+	 }
+}
+
+class Child1 extends Parent
+{
+	 long  phoneNumber;
+}
+
+class  Child2 extends Parent
+{
+	
+}
+
+class  IheritanceDemo1
+{
+	public static void main(String[] args) 
+	{
+		/*
+		Child1  c1=new Child1();
+		Child2  c2=new Child2();
+		c1.name="Raja";
+		c1.address="Govind Nagar";
+		c1.phoneNumber=8754564L;
+		c1.getData();
+		
+		c2.name="Rani";
+		c2.address="Saket Nagar";
+		c2.getData();
+		
+		Parent  p1=new Parent();
+		p1.name="Ramesh";
+		p1.address="kanpur";
+		//p1.phoneNumber=123455L;
+		p1.getData();
+		
+		System.out.println(p1.hashCode());
+		System.out.println(p1.getClass());
+		
+		
+		Parent  p2=new Child1();
+		p2.name="Raja";
+		p2.address="Govind Nagar";
+		//p2.phoneNumber=8754564L;
+		p2.getData();
+		
+		*/
+		
+		Child1  c2=new Child1();
+		Parent  p2=c2;
+		Child1  c3=(Child1)p2;
+	}
+}
