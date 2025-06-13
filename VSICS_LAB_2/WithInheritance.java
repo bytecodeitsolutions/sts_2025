@@ -1,0 +1,110 @@
+/*
+  Why???
+  How?? extends
+  
+  Car==>Parent , super , base class
+  Baleno , Innova , Fortuner ==>Child , sub , derived class
+  
+  Case-1:
+  
+  if we have the object of Parent class and reference is also of type Parent
+  
+  Car  c1=new Car();
+  
+  then we can access only Parent class members (variables and methods).
+  but we can't access child class variables and methods.
+  
+  
+  Case-2:
+  
+  if we have the object of Child class and reference of Child class
+  
+  Baleno  b1=new Baleno();
+  then it is allowed to access both class (parent class and Child class)
+  properties and functionalities .
+  
+  Case-3:
+  
+  if we have the object of Child class and reference of Parent class.
+  
+  Car  c1=new Baleno();
+  
+  then we can access only Parent class variables and methods using (c1 )
+  this reference.  
+  
+  Case-4:
+  
+  if we have the object of Parent class and reference of Child class
+  
+  Baleno  b1=new Car();
+  
+  this is not possible , Parent can't converted to Child
+*/
+
+
+class Car
+{
+	String carName;
+	int  carId;
+	String carModel;
+	
+	void  getCarData(){
+		System.out.println("Car name ::"+carName +" car id ::"+carId +" car model ::"+carModel);
+	}
+}
+
+class Baleno extends Car
+{
+	int numberOfAirBags;
+}
+
+class Innova extends Car
+{
+	
+}
+class Fortuner extends Car
+{
+	
+}
+class  WithInheritance
+{
+	public static void main(String[] args) 
+	{
+		/*
+		Fortuner  f1=new Fortuner();
+		f1.carName="Fortuner Legender";
+		f1.carId=1011;
+		f1.carModel="2.5v";
+		f1.getCarData();
+		
+		Innova  i1=new Innova();
+		i1.carName="Innova";
+		i1.carId=1012;
+		i1.carModel="2.4z";
+		i1.getCarData();
+		
+		Baleno  b1=new Baleno();
+		b1.carName="Maruti Suzuki Baleno";
+		b1.carId=1013;
+		b1.carModel="Baleno Zeta";
+		b1.numberOfAirBags=6;
+		b1.getCarData();
+		
+		Car  c1=new Car();
+		c1.carId=2022;
+		//c1.numberOfAirBags=8;
+		
+		
+		Car  b1=new Baleno();
+		
+		b1.carName="Maruti Suzuki Baleno";
+		b1.carId=1013;
+		b1.carModel="Baleno Zeta";
+		b1.numberOfAirBags=6;
+		b1.getCarData();
+		
+		*/
+		Baleno  b1=new Car();
+		
+	}
+}
