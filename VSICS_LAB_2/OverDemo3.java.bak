@@ -1,0 +1,30 @@
+class Student
+{
+	int  rno;
+	String name;
+	String course;
+	String address;
+	double fee;
+	
+	void displayStudentData(Student  s1){
+		System.out.println(s1.toString());
+		
+	}
+	
+	 public String toString(){
+		return "[ roll number ="+rno +" name="+name +" course ="+course +" address="+address +" fee="+fee +" ]";
+	 } 
+}
+class OverDemo3 
+{
+	public static void main(String[] args) 
+	{
+		Student  obj=new Student();
+		obj.rno=101;
+		obj.name="Raja";
+		obj.course="BCA";
+		obj.address="Saket";
+		obj.fee=60000.0;
+		obj.displayStudentData(obj);
+	}
+}

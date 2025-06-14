@@ -1,0 +1,38 @@
+/*
+   Overriding:
+   -----------
+*/
+
+class Parent
+{
+	void  study(){
+		System.out.println("we should study in the morning");
+	}
+	
+	void sleep(){
+		System.out.println("we should sleep at 10:00 PM");
+	}
+}
+class Child1 extends Parent
+{
+	
+	void sleep(){
+		System.out.println("we should sleep at 03:00 AM");
+	}
+}
+
+class Child2 extends Parent
+{
+	void sleep(){
+		System.out.println("we should sleep at 01:00 AM");
+	}
+}
+class  OverDemo1
+{
+	public static void main(String[] args) 
+	{
+		Parent  p1=new Child1();
+		p1.sleep();
+		
+	}
+}
