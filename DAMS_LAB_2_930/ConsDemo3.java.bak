@@ -1,0 +1,26 @@
+class Parent1
+{
+	Parent1(){
+		
+		System.out.println("super");
+	}
+}
+
+class Child1 extends Parent1
+{
+	Child1(){
+		this(10);
+		System.out.println("child");
+	}
+	Child1(int  a){
+		
+		System.out.println("child-int");
+	}
+}
+class  ConsDemo3
+{
+	public static void main(String[] args) 
+	{
+		Child1  obj1=new Child1();
+	}
+}

@@ -1,0 +1,15 @@
+public class ConstructorDemo2 
+{
+	int  a;
+	String  s;
+	
+	static ConstructorDemo2(){
+		System.out.println("hello");
+	}
+	
+	public static void main(String[] args) 
+	{
+		ConstructorDemo2  obj=new ConstructorDemo2();
+		
+	}
+}

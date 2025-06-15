@@ -1,0 +1,75 @@
+/*
+   Constructor in java:
+   --------------------
+   1-st way: at the time of declaration
+   
+    int  kId=111;
+	float kPrice=1000.0f;
+	String kName="HP_1234";
+	
+	================================
+	
+	2nd way: using accessing the variable
+	
+	Keyboard  k1=new Keyboard();
+		k1.kId=111;
+		k1.kPrice=1000.0f;
+		k1.kName="HP_1234";
+    ===================================
+	
+	3rd way- bus using setter method
+	
+	Keyboard  k1=new Keyboard();
+	k1.setKId(111);
+	k1.setKPrice(1000.0f);
+	k1.setKName("HP_1234");
+	
+	==========================================
+	
+	4th way: by using constructor
+	
+	why??
+	How??
+	
+	class  ClassName{
+	
+	   ClassName(){
+	       
+	   }
+	}
+	
+	
+*/
+
+class Keyboard
+{
+	private int  kId;
+	private float kPrice;
+	private String kName;
+	
+	Keyboard(int  Id,float Price,String Name){
+		System.out.println("Constructor executed");
+		kId=Id;
+		kPrice=Price;
+		kName=Name;
+		
+	}
+	
+	void getKeyBoardData(){
+		System.out.println(kId);
+		System.out.println(kPrice);
+		System.out.println(kName);
+	}
+}
+class  WhyContructor
+{
+	
+	public static void main(String[] args) 
+	{
+		Keyboard  k1=new Keyboard(111,1000.0f,"HP_1234");
+		k1.getKeyBoardData();
+		Keyboard  k2=new Keyboard(222,2000.0f,"DELL_1234");
+		k2.getKeyBoardData();
+	
+	}
+}
