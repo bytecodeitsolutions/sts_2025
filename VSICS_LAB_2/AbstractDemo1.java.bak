@@ -1,0 +1,32 @@
+interface ATM 
+{
+	int  a=10;
+	void  m1();
+	
+}
+class PNBATM
+{
+	public int  b;
+	static int  c;
+	final  int d;
+	public static int e;
+	public final int  f;
+	final static int  g;
+	public static final int h;
+	void m12();
+}
+class SBIATM
+{
+	
+}
+class ICICIATM
+{
+	
+}
+class  AbstractDemo1
+{
+	public static void main(String[] args) 
+	{
+		
+	}
+}

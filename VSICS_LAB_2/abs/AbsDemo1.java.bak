@@ -1,0 +1,11 @@
+package org.vsicskanpur.main;
+import org.vsicskanpur.user.*;//implicit import
+class AbsDemo1 
+{
+	public static void main(String[] args) 
+	{
+		User  u=new User();
+		setData();
+	    getData();
+	}
+}

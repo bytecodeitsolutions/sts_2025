@@ -1,0 +1,33 @@
+/*
+  why?
+  
+  How to define java constructor:
+  -------------------------------
+  1. name of class and name of constructor must be same
+  2. constructor executes at the time of object creation
+  3. we can not use return type with constructor
+  4. if we are using then it will be behave as method
+  5. public , private , protected , default
+  6. super() ==>call to super class constructor
+  this() this super
+  
+*/
+class Constructor1
+{
+	Constructor1(){
+		
+		System.out.println("0 param cinstructor executed!");
+	}
+}
+class  Constructor2
+{
+	public static void main(String[] args) 
+	{
+		new Constructor1();
+		new Constructor1();
+		new Constructor1();
+		new Constructor1();
+		new Constructor1();
+		
+	}
+}

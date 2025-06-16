@@ -1,0 +1,8 @@
+package org.vsicskanpur.user;
+
+public interface User
+{
+    void setData();
+	void getData();
+}
+

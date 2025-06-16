@@ -1,0 +1,11 @@
+package org.vsicskanpur.user;
+import org.vsicskanpur.user.*;
+public class  MarriedUser implements User
+{
+	public void setData(){
+		System.out.println("married user data stored into db");
+	}
+	public void getData(){
+		System.out.println("married user data fetching");
+	}
+}
