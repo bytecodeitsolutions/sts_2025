@@ -7,10 +7,14 @@ class AbstractioApp
 	{
 		Vehicle  obj=VehicleFactory.getVehicleObject(args[0]);
 		
-		
+		try{
 		obj.getTotalNumberOfWheels();
 		obj.getTotalNumberOfAirBags();
 		obj.tankCapacity();
+		}catch(NullPointerException e){
+			System.out.println(args[0] +" this type of object is not available in our factory");
+		}
+		
 	}
 }
 /*

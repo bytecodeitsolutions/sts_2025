@@ -1,0 +1,39 @@
+class ProductNotFoundException extends Throwable //checked execption
+{
+	ProductNotFoundException(String  msg){
+		super(msg);
+	}
+}
+class User
+{
+	void checkProduct(String  pName) throws ProductNotFoundException
+	{
+		Product.verifyProduct(pName);
+	}
+}
+class Product
+{
+	 static void verifyProduct(String  product) throws ProductNotFoundException
+	 {
+		if (product.equals("laptop"))
+		{
+			System.out.println("we have "+product);
+		}
+		else if (product.equals("mobile"))
+		{
+			System.out.println("we have "+product);
+		}
+		else{
+			throw new ProductNotFoundException("Invalid Product");
+		}
+	 }
+}
+class OurException 
+{
+	public static void main(String[] args) 
+	{
+		User  u1=new User();
+		
+		u1.checkProduct(args[0]);
+	}
+}

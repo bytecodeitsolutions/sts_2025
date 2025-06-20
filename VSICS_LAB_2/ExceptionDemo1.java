@@ -1,0 +1,75 @@
+/*
+   Exception handling:
+   ------------------
+   What is exception?
+   
+   Any unwanted,unexpected event which disturbs the normal flow of program
+   is called execption.
+   
+   SleepingException
+   TyrePunchuredException
+   BombBlastException
+   PenNotWorkingException
+   AdmitCardNotFoundException
+   
+   ........................................etc
+   
+   What is the meaning of exception handling?
+      |-Executing the rest of the program normally
+	  |-passing meaningful message to end user
+	     convert this type message into meaningful
+		 
+		    Exception in thread "main" java.lang.NumberFormatException: For input string: "x"
+        at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+        at java.base/java.lang.Integer.parseInt(Integer.java:668)
+        at java.base/java.lang.Integer.parseInt(Integer.java:786)
+        at ExceptionDemo1.main(ExceptionDemo1.java:15)
+		
+		Please enter only integer value
+		
+		===========================================================================
+		try--->risky(whisky) code try{}
+		catch
+		finally
+		throw
+		throws
+		assert==>testing
+		
+   
+   
+*/
+class  ExceptionDemo1
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("statement-1");
+		System.out.println("statement-2");
+		try{
+		  System.out.println(Integer.parseInt(args[0])/Integer.parseInt(args[1]));
+		}
+		
+		catch(Throwable e){
+			System.out.println(e.toString());
+			System.out.println(e.getMessage());
+			e.printStackTrace();
+		}
+		
+		System.out.println("statement-4");
+		System.out.println("statement-5");
+	}
+}
+/*
+jab koi exception ata hai==>
+  DefaultExceptionHandler:
+  ------------------------
+     says that if there is any exception then 
+	   |-I can create an object
+	   |-within that object , I can put 3 things
+	      java.lang.ArithmeticException:==>exception name (kaun sa exception a rha hai)
+		  / by zero :==>description (kiski wajah se a rha hai)
+          at ExceptionDemo1.main(ExceptionDemo1.java:15) ==>location (kha exception a rh ahai)
+        |-throw that object with data
+		|-shutdown the JVM
+		
+		thatwhy JVM is not able to print statement-4 and statement-5
+*/

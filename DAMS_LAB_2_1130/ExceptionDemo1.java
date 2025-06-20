@@ -1,0 +1,83 @@
+/*
+   Abstraction:
+     |-interface
+	 |-abstract class
+	 
+	 Exception handling:
+	 -------------------
+	 
+	 Scenario-1:
+	         -2:
+			 -3:0
+			 
+Hello World-1!
+Hello World-2!
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+        at ExceptionDemo1.main(ExceptionDemo1.java:21)
+		
+		
+	 java.lang.--package
+	 ArithmeticException--class
+	 / by zero--reason
+	 at ExceptionDemo1.main(ExceptionDemo1.java:21)-- stack trace -location
+	 
+	 JVM stopped / shutdown
+*/
+
+class  ExceptionDemo1 extends RuntimeException
+{
+	public static void main(String[] args) 
+	{
+		throw new ExceptionDemo1();
+	 	
+	}
+}
+/*
+  Any unwanted, unexpected event which disturbs the normal flow of program
+  is called excecption.
+  
+  What is the meaning of exception handling:---
+  ---------------------------------------------
+  
+  execute rest of code  normally
+  provide meaningfull message to end user
+  
+  
+  ***jab koi exception ata hai to by default , 
+  
+  DefaultExceptionHandler  ye sare kam krta hai
+      |-1.jis type of exception ayega uska object bnega
+	  |-2.object k ander 3 information rkhega
+	       ArithmeticException--class
+	       / by zero--reason
+	        at ExceptionDemo1.main(ExceptionDemo1.java:21)-- stack trace -location
+	  |-3.throw that object 
+	  |-4.shutdown JVM
+	  
+	  aut isliye hi tumahata aage ka code execute nhi ho rha
+	  
+	  lekin as a developer , it our resposibility to handle the execption by own
+	  aur meaning of exception handling
+	     |- execute rest of code  normally
+         |- provide meaningful message to end user
+  
+	    sir kaise krenge????
+		
+		agar tum khud hi handle  krna chahte ho to java walon ne 
+		
+		kuch diya hai 
+		
+		try----->
+		catch--->
+		throw
+		throws
+		finally
+		assert
+		NumberFormatException  t1
+		int  a
+		String  s
+		Gadha  obj
+		
+		
+		
+*/
