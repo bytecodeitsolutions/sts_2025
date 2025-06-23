@@ -1,6 +1,8 @@
 package demo;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -15,6 +17,8 @@ public class SimpleFileExample {
 
 			/// Write data to the file using
 			Writer writer = new FileWriter(file);
+			
+			
 			writer.write("Hello Java!\n");
 			writer.write("This is a simple file write-read example.");
 			writer.close();
@@ -22,6 +26,7 @@ public class SimpleFileExample {
 
 			// Read data from the file using FileReader
 			Reader reader = new FileReader(file);
+			
 			int ch;
 			System.out.println("\nReading from file:");
 			while ((ch = reader.read()) != -1) {
