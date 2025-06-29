@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="a1" class="com.bytecode.beans.Account">
+		<property name="accountNumber" value="112233" />
+		<property name="balance" value="10000" />
+	</bean>
+
+	<bean id="c1" class="com.bytecode.beans.Customer">
+		<constructor-arg value="9794687277" index="1" />
+		<constructor-arg value="Raja" index="0" />
+		<constructor-arg ref="a1" />
+		<property name="name" value="Rani" />
+		<property name="phoneNumber" value="12344567" />
+		<property name="account" ref="a1" />
+		<property name="phoneNumbers">
+		<set>
+		  <value>123456</value>
+		  <value>123456</value>
+		  <value>123457</value>
+		</set>
+		</property>
+		<property name="address">
+			<list>
+				<value>Kanpur</value>
+				<value>Lucknow</value>
+			</list>
+		</property>
+
+	</bean>
+
+</beans>
