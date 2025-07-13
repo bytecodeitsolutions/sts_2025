@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+   <!-- <bean id="ms" class="com.bytecode.spring.service.MessageService"/>-->
+	
+	<bean id="ems" class="com.bytecode.spring.service.impl.EmailMessageService"/>
+	<bean id="sms" class="com.bytecode.spring.service.impl.SMSMessageService"/>
+	
+	<bean id="ams" class="com.bytecode.spring.beans.AlertMessage">
+	  <constructor-arg name="messageService" ref="sms"/>
+	</bean>
+</beans>

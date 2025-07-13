@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- <bean id="b" class="com.bytecode.spring.beans.D"/>-->
+
+	<bean id="b1" class="com.bytecode.spring.beans.B" />
+
+	<bean id="c1" class="com.bytecode.spring.beans.C" />
+
+	<bean id="a" class="com.bytecode.spring.beans.A" autowire="byType" />
+
+</beans>

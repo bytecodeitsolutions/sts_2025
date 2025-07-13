@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="animal" class="com.bytecode.spring.Animal" abstract="true">
+		<property name="name" value="animal" />
+		<property name="age" value="100" />
+		<property name="price" value="10000" />
+		<property name="ownerName" value="Raja" />
+		<property name="address" value="Kanpur" />
+	</bean>
+
+	<bean id="dog" class="com.bytecode.spring.Dog" parent="animal">
+
+	</bean>
+
+	<bean id="cat" class="com.bytecode.spring.Cat" parent="animal">
+
+	</bean>
+</beans>

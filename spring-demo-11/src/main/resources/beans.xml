@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="t1" class="com.bytecode.spring.beans.Test1" autowire="byType">
+		<property name="a" value="100" />
+		<property name="b" value="200" />
+	</bean>
+	<bean id="test2" class="com.bytecode.spring.beans.Test2" />
+	<bean id="test3" class="com.bytecode.spring.beans.Test3"
+	/>
+
+	<bean id="test4" class="com.bytecode.spring.beans.Test4" autowire="byType" >
+     <property name="rno" value="1001" />
+		<property name="name" value="Raja" />
+    </bean>
+ </beans>
