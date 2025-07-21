@@ -1,0 +1,26 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.bytecode</groupId>
+	<artifactId>spring-demo-12-reading-data-from-file</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>spring-demo-12-reading-data-from-file</name>
+	<description>reading app related data from external properties file</description>
+	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>6.1.6</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.32</version> <!-- Latest stable as of July 2025 -->
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+</project>
