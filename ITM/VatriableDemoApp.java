@@ -1,0 +1,48 @@
+/*
+  Datatype:
+  Types of variables:
+  -------------------
+  why variable????
+  
+  Primitive variable
+  Non Primitive variable
+  
+  ===========================
+  purpose and position:
+  --------------------
+  static variable
+  non static variable
+  local variable
+  
+  *********************************************
+  static variable:
+  ----------------
+  1. if the value of a variable is not changing from object to
+  object then we should define that varibale as static variable.
+  
+  2. we can access static variable in 3 ways
+     ClassName.variableName
+	 obj_ref_var.varibleName
+	 variableName(but within same class)
+	 
+  
+  
+*/
+
+class Student
+{
+	static int  a=10;
+	static int  b=20;
+	static int  c=30;
+}
+class  VatriableDemoApp
+{
+	
+	public static void main(String[] args) 
+	{
+		//System.out.println(a);
+		System.out.println(Student.b);
+		Student  obj=new Student();
+		System.out.println(obj.c);
+	}
+}
