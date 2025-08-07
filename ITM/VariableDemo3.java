@@ -1,0 +1,33 @@
+class Test1
+{
+	static int  a=10;
+	int  x=1;
+	static{
+		System.out.println("a="+a);
+	}
+	
+	{
+		System.out.println(hashCode() +" :: x="+x);
+	}
+}
+class Test2
+{
+	static int  b=20;
+	int  y=2;
+	static{
+		System.out.println("b="+b);
+	}
+	{
+		System.out.println("y="+y);
+	}
+}
+class  VariableDemo3
+{
+	public static void main(String[] args) 
+	{
+		Test1  t1=new Test1();
+		Test1  t2=new Test1();
+		Test1  t3=new Test1();
+		System.out.println("main method got executed");
+	}
+}

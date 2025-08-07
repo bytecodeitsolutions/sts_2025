@@ -1,0 +1,45 @@
+/*
+   Why methods?
+   Syntax to define method?
+   method calling?
+   method execution in stack?
+   
+   returnType  methodName(){
+   
+   }
+   
+   void  login(){
+      //business logic
+   }
+   
+   void registration(){
+      //method body =business logic
+   }
+*/
+
+class Test
+{
+	void  m1(){
+		 m2();
+		 System.out.println("m1 method got executed");
+	}
+	void m2(){
+		m3()
+		System.out.println("m2 method got executed");
+		m4();
+	}
+	void m3(){
+		System.out.println("m3 method got executed");
+	}
+	void m4(){
+		System.out.println("m4 method got executed");
+	}
+}
+class MethodDemo1 
+{
+	public static void main(String[] args) 
+	{
+		Test  t1=new Test();
+		t1.m1();
+	}
+}
