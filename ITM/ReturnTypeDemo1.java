@@ -1,0 +1,31 @@
+/*
+   Return type:
+   ------------
+   
+*/
+
+class Tiffin
+{
+	String item1;
+	String item2;
+	String item3;
+	
+	Tiffin  getTiffin(String item1,String item2,String item3){
+		Tiffin t1=new Tiffin();
+		t1.item1=item1;
+		t1.item2=item2;
+		t1.item3=item3;
+		return t1;
+	}
+}
+class  ReturnTypeDemo1
+{
+	public static void main(String[] args) 
+	{
+		Tiffin t1=new Tiffin();
+		Tiffin x=t1.getTiffin("chapati","paneer butter masala","pulaw");
+		System.out.println(x.item1);
+		System.out.println(x.item2);
+		System.out.println(x.item3);
+	}
+}
