@@ -1,0 +1,74 @@
+/*
+   Inheritance:
+   -----------
+   
+   Why Inheritance? (IS-A relationship)
+    extends==?
+	code reusability
+  
+     
+   
+   
+*/
+class Animal
+{
+	 String name;//property
+	 
+	 void speak(){ //functionality
+		System.out.println("speak method from animal class");
+	 }
+	 
+}
+class Dog extends Animal
+{
+	void  run(){
+		System.out.println("run method from Dog");
+	}
+}
+
+class Puppy extends Dog
+{
+	void eat(){
+		System.out.println("eat method from Puppy");
+	}
+}
+
+class  InheritanceDemo1
+{
+	public static void main(String[] args) 
+	{
+		Dog p1=new Puppy();
+		
+		Puppy  p2=(Puppy)p1;
+		
+	//	p1.run();
+	//	p1.eat();
+		
+		p2.run();
+		p2.eat();
+		
+	}
+}
+/*
+//Case-1:
+		Dog  c1=new Dog();
+		c1.name="xyz";
+		c1.speak();
+		c1.run();
+		
+		//case-2:
+		Animal  a1=new Animal();
+		a1.name="xyz";
+		a1.speak();
+		//a1.run();
+		
+		//Case-3:
+		Animal  a2=new Dog();
+		a2.name="xyz";
+		a2.speak();
+		//a2.run();
+		
+		//case-4: reference of child and object of parent
+		//Dog  d1=new Animal();
+
+*/

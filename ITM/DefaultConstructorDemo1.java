@@ -1,0 +1,20 @@
+class DefaultConTest
+{
+	
+}
+
+class DefaultConTest1
+{
+	String s;
+	
+}
+class TestITM
+{
+	
+}
+class DefaultConstructorDemo1 
+{
+	public static void main(String[] args) 
+	{
+	}
+}

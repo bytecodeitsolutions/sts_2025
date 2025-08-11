@@ -1,0 +1,81 @@
+/*
+    datatype  variableName;
+	datatype  variableName=value;
+	
+    int   rollNumber;
+	
+	static variable-->ClassName ,object_reference-variable
+	non static------->object_reference_variable
+	
+	========================================================
+	
+	class Teacher{
+	    int  teacherId;
+		String teacherName;
+		
+		public void setTeacherId(int  teacherId){
+		     this.teacherId=teacherId;
+		}
+		
+		public int getTeacherId(){
+	         return teacherId;
+		}
+		
+		public String getTeacherName() {
+		     return teacherName;
+	    }
+	   public void setTeacherName(String teacherName) {
+		   this.teacherName = teacherName;
+	   }
+	}
+	
+	/*
+//phonePay
+//GPay
+//debitCard
+class Student
+{
+	
+	private int  rollNumber=101;
+	
+	void getStudentRollNumber(){
+		 System.out.println(rollNumber +" "+hashCode());
+	}
+}
+
+	
+	data hiding: + Encapsulation
+	----------------------------
+*/
+
+class Account
+{
+	private double balance;
+	
+	public void setBalance(double balance){
+		System.out.println("setBalance ="+this.hashCode());
+		System.out.println("balance before="+balance);
+		balance=this.balance;//local balance==>stack me
+		System.out.println("balance after="+balance);
+	}
+	public double getBalance(){
+		return balance;//non static balance===>object wala
+	}
+}
+
+class  VariableInitialization
+{
+
+	public static void main(String[] args) 
+	{
+		Account  a1=new Account();
+		Account  a2=new Account();
+		System.out.println("address a1="+a1.hashCode());
+		System.out.println("address a2="+a2.hashCode());
+		a1.setBalance(1000);
+		a2.setBalance(2000);
+		double  bal=a1.getBalance();
+		System.out.println("balance in acc a1="+bal);
+		System.out.println("balance in acc a2="+a2.getBalance());
+	}
+}

@@ -1,0 +1,27 @@
+class Parent
+{	
+	Parent(){
+		System.out.println("parent class 0 param constructor");
+	}
+}
+class Child extends Parent
+{
+	int  a;
+	Child(int  a){
+		this.a=a;
+		System.out.println("Child class 0 param constructor "+hashCode());
+	}
+	
+	Child(int  rno,String name){
+		this(100);
+		System.out.println("Child class 2 param constructor "+hashCode());
+	}
+}
+class SuperDemo1 
+{
+	public static void main(String[] args) 
+	{
+		Child  c2=new Child(101,"Raja");
+		//Child  c1=new Child(100);
+	}
+}
