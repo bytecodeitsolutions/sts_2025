@@ -1,0 +1,226 @@
+/*
+    Polymorphism:
+	-------------
+	  same name different behaviour.
+	  
+	  why??
+	   to acheive flexibility
+	   
+	   We can polymorphism by 2 ways:
+	      |-compiletime  (compiler based on reference)| Early binding 
+		                                static polymorphism
+		       |-method overloading 
+			   |-Method hiding
+		  |-runtime (jvm based on object) | Late binding | dynamic                                  polymorphism
+		       |-Overriding
+			   
+			   
+	Compiletime polymorphism:
+	----------------------------
+	Overloading:
+	------------
+	  sumOfInt(int  a, int  b)
+	  sumOfFloat(float a,float b)
+	  
+	  In java:
+	  ---------
+	  class  OLDemo1{
+	      void  sum(int  a){
+		  
+		  }
+		  void  sum(float  b){
+		  
+		  }
+	  }
+	  
+	  Case-1:
+	     type:
+		 
+		  void  sum(int  a){
+		  
+		  }
+		  void  sum(float  b){
+		  
+		  }
+		  
+	Case-2:
+	  number of arguments:
+	      void  sum(int  a,int  b){
+		  
+		  }
+		  void  sum(int  b){
+		  
+		  }
+		  
+	Case-3:
+	   order :
+	      void  sum(int  a,float  b){
+		  
+		  }
+		  void  sum(float  b,int   a){
+		  
+		  }
+		  
+		  ========================================
+		  case1:- automatic promotions in overloading
+		                          8       4
+		  byte-->short-->int--->long--->float--->double
+		         char-->int
+				 
+    void  m1(float  b){
+		System.out.println("float");
+	}
+	
+	void  m1(double  b){
+		System.out.println("double");
+	}
+				 
+				 
+		Case-2:
+		-------
+		
+		class Animal
+{
+	
+}
+class Dog extends Animal
+{
+}
+class Puppy extends Dog
+{
+}
+class OLTest1
+{	
+	void  m1(Dog b){
+		System.out.println("dog");
+	}
+	
+	void  m1(Animal a){
+		System.out.println("animal");
+	}
+	
+	void  m1(Puppy p){
+		System.out.println("puppy");
+	}
+}
+class OLDemo1 
+{
+	public static void main(String[] args) 
+	{
+		OLTest1  obj=new OLTest1();
+		obj.m1(new Puppy());
+	}
+}
+
+
+Case-3:-
+==========
+	
+		class Parent10
+{
+}
+class Child10 extends Parent10
+{
+}
+class OLTest1
+{	
+	void  m1(Parent10  a){
+		System.out.println("Parent10");
+	}
+	
+	void  m1(Child10  sb){
+		System.out.println("Child10");
+	}
+
+}
+class OLDemo1 
+{
+	public static void main(String[] args) 
+	{
+		OLTest1  obj=new OLTest1();
+		obj.m1(null);
+	}
+}
+
+
+Case-4:
+==================
+	class OLTest1
+{	
+	void  m1(int  a){//1.0
+		System.out.println("general");
+	}
+	
+	void  m1(int...  a){//1.5v
+		System.out.println("var-arg");
+	}
+
+}
+class OLDemo1 
+{
+	public static void main(String[] args) 
+	{
+		OLTest1  obj=new OLTest1();
+		obj.m1(10);
+	}
+}
+
+	
+	Case-5:
+	
+	class OLTest1
+{	
+	void  m1(int  a,float  b){
+		System.out.println("int-float");
+	}
+	
+	void  m1(float  a,int  b){
+		System.out.println("float-int");
+	}
+}
+class OLDemo1 
+{
+	public static void main(String[] args) 
+	{
+		OLTest1  obj=new OLTest1();
+		//obj.m1(10,10);
+		//obj.m1(10,10L);
+		obj.m1(10,10.0);
+	}
+}
+
+
+Case-6:
+-------
+		
+*/
+class A
+{
+	
+}
+class B extends A
+{
+	
+}
+class OLTest1
+{	
+	void  m1(A  obj){
+		System.out.println("A");
+	}
+	
+	void  m1(B obj){
+		System.out.println("B");
+	}
+}
+class OLDemo1 
+{
+	public static void main(String[] args) 
+	{
+		OLTest1  obj=new OLTest1();
+		A  a1=new A();
+		B  b1=new B();
+		A  c1=new B();
+		obj.m1(c1);
+		//obj.m1(b1);
+	}
+}

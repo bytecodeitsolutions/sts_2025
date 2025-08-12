@@ -1,0 +1,262 @@
+/*
+   Overriding:
+     Case-1:
+	   Covarient return type:
+	   ---------------------
+Parent	   byte  short  int  long  float  double       Parent
+Child	   byte  short  int  long  float  double    Parent , Child
+
+
+class Parent11
+{
+	Parent11  m1(){
+		return null;
+	}
+}
+class Child11 extends Parent11
+{
+	Parent11  m1(){
+		return null;
+	}
+}
+class  OverDemo3
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World!");
+	}
+}
+
+
+Case-2:
+----------
+private:-
+
+private method can not override but we can define in both parent and child class.
+
+
+Case=3:
+final 
+
+class Parent11
+{
+	 void  marry(){
+		System.out.println("marry acc to Parent");
+	 }
+}
+class Child11 extends Parent11
+{
+	 final void  marry(){
+		System.out.println("marry acc to Child");
+	 }
+}
+class  OverDemo3
+{
+	public static void main(String[] args) 
+	{
+		Parent11  p2=new Parent11();
+		p2.marry();
+		
+		Child11 c1=new Child11();
+		c1.marry();
+		
+		Parent11 p1=new Child11();
+		p1.marry();
+	}
+}
+=========================================================
+
+Case-4:
+overriding with res to access modifiers
+
+public>protected>default>private
+
+
+==========================================================
+class Parent11
+{
+	 void  marry(){
+		System.out.println("marry acc to Parent");
+	 }
+}
+class Child11 extends Parent11
+{
+	public  void  marry(){
+		System.out.println("marry acc to Child");
+	 }
+}
+class  OverDemo3
+{
+	public static void main(String[] args) 
+	{
+		Parent11  p2=new Parent11();
+		p2.marry();
+		
+		Child11 c1=new Child11();
+		c1.marry();
+		
+		Parent11 p1=new Child11();
+		p1.marry();
+	}
+}
+
+=====================================================
+
+Case-5:
+abstract modifier
+----------------------------------------------------
+
+abstract class Parent11
+{
+	abstract  void  marry();
+}
+class Child11 extends Parent11
+{
+	void marry(){
+		
+	}
+}
+class Child12 extends Child11
+{
+	
+}
+class  OverDemo3
+{
+	public static void main(String[] args) 
+	{
+		
+	}
+}
+
+
+==================================================
+
+Case-6:
+ var-arg method
+ --------------------------------------------------
+
+class Parent11
+{
+	void  marry(int ... a){
+		System.out.println("Parent");
+	}
+}
+class Child11 extends Parent11
+{
+	void marry(int  a){
+		System.out.println("Child");
+	}
+}
+
+class  OverDemo3
+{
+	public static void main(String[] args) 
+	{
+		Parent11  p1=new Parent11();
+		p1.marry(1);
+		
+		Child11  c1=new Child11();
+		c1.marry(2);
+		
+		Parent11 c2=new Child11();
+		c2.marry(2);
+	}
+}
+
+
+=================================================
+Case-7:
+
+   overriding w r to variables:
+   -------------------------------------------------
+   
+   class Parent11
+{
+	int   a=100;
+}
+class Child11 extends Parent11
+{
+	int  a=200;
+}
+
+class  OverDemo3
+{
+	public static void main(String[] args) 
+	{
+		Parent11  p1=new Parent11();
+		System.out.println(p1.a);
+		
+		Child11  c1=new Child11();
+		System.out.println(c1.a);
+		
+		Parent11 c2=new Child11();
+		System.out.println(c2.a);
+	}
+}
+================================================
+   
+ Case-8:
+  over static : (Method hiding)
+  -----------------------------------------------
+  class Parent11
+{
+	static  void m1(){
+		System.out.println("Parent");
+	}
+}
+class Child11 extends Parent11
+{
+	static  void m1(){
+		System.out.println("Child");
+	}
+}
+
+class  OverDemo3
+{
+	public static void main(String[] args) 
+	{
+		Parent11  p1=new Parent11();
+		p1.m1();
+		
+		Child11  c1=new Child11();
+		c1.m1();
+		
+		Parent11 c2=new Child11();
+		c2.m1();
+	}
+}
+
+====================================================
+Case-9:
+Exception:
+------------------
+ 
+*/
+
+class Parent11
+{
+	void m1() throws Exception{
+		System.out.println("Parent");
+	}
+}
+class Child11 extends Parent11
+{
+	void m1() throws ArithmeticException{
+		System.out.println("Child");
+	}
+}
+
+class  OverDemo3
+{
+	public static void main(String[] args) throws Exception
+	{
+		Parent11  p1=new Parent11();
+		p1.m1();
+		
+		Child11  c1=new Child11();
+		c1.m1();
+		
+		Parent11 c2=new Child11();
+		c2.m1();
+	}
+}

@@ -1,0 +1,55 @@
+/*
+    Polymorphism:
+	-------------
+	
+	poly + morphism
+	
+	many + forms
+	
+	String s1=new String("java");
+		String s2=new String("java");
+		
+		System.out.println("s1="+s1);
+		System.out.println("s2="+s2);
+		
+		StringBuffer sb1=new StringBuffer("java");
+		StringBuffer sb2=new StringBuffer("java");
+		
+		System.out.println("sb1="+sb1);
+		System.out.println("sb2="+sb2);
+		
+		System.out.println("s1.equals(s2) ="+s1.equals(s2));
+		System.out.println("sb1.equals(sb2) ="+sb1.equals(sb2));
+*/
+class  PolymorphismDemo1
+{
+	public static void main(String[] args) 
+	{
+		java.util.ArrayList  al=new java.util.ArrayList();
+		al.add(100);
+		al.add(10);
+		al.add(10);
+		al.add(15);
+		al.add(1);
+		al.add(12);
+		System.out.println(al);
+		java.util.HashSet  al1=new java.util.HashSet();
+		al1.add(100);
+		al1.add(10);
+		al1.add(10);
+		al1.add(15);
+		al1.add(1);
+		al1.add(12);
+		
+		System.out.println(al1);
+		java.util.TreeSet  al2=new java.util.TreeSet();
+		al2.add(100);
+		al2.add(10);
+		al2.add(10);
+		al2.add(15);
+		al2.add(1);
+		al2.add(12);
+		System.out.println(al2);
+		
+	}
+}

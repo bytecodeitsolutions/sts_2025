@@ -1,0 +1,87 @@
+/*
+OOPs:-
+    Inheritance:
+	------------
+	   why? 
+	     reusability
+	   how?
+	     extends
+		 
+		 
+		 
+		/*
+		  case-1: if we have object of child class 
+		          and reference of child class
+				  Child  c1=new Child();
+				  
+				  we can access all the properties and functionalities of parent class and child class.
+				  
+		 Case-2:
+		     if we have object of parent class and reference of parent class 
+			 Parent p1=new Parent();
+			 then we can access only parent class properties and functionalities.
+			 
+		case-3:
+		if we have object of Child class and reference of Parent class
+		then we can access only parent class properties and functionalities.
+		
+		  Parent  p1= new Child();
+		  
+		  case-4:
+		  
+		  if we have object of Parent class and reference of Child class 
+		  
+		  Child  c1=new Parent();
+		  directly it is not possible.
+		  
+		   Parent  p1=new Child();
+		   Child  c1=p1;  //CE- Parent can not be converted to Child
+		   Child  c2=(Child)p1;
+		   
+		   ========================================================
+		   
+		   
+		   Object:- super class
+		*/
+
+
+class Parent //super , parent , base
+{
+	//data
+	//method
+	int  a;
+	void  m1(){
+		
+	}
+}
+class Child extends Parent //child-subclass 
+{
+	int  b;
+	void  m2(){
+		
+	}
+}
+public class  InheritanceDemo2
+{
+	public static void main(String[] args) 
+	{
+		Demo1 d1=new Demo1();
+		System.out.println(d1.hashCode());
+		System.out.println(d1.toString());
+		System.out.println(d1.getClass());
+		
+	}
+}
+
+
+class Demo1 
+{
+	
+}
+
+class A 
+{
+}
+class B extends A,Demo1
+{
+}

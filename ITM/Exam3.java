@@ -1,0 +1,17 @@
+class Test1
+{
+	int  a;
+	static int  b;
+	
+		static void m1(){
+			System.out.println(a+b);
+		}
+}
+class Exam3 
+{
+	public static void main(String[] args) 
+	{
+		Test1  t1=new Test1();
+		t1.m1();
+	}
+}

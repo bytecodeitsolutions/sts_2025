@@ -1,0 +1,22 @@
+class OverDemo2 
+{
+	public static void main(String[] args) 
+	{
+		
+	   String s1=new String("Java");
+		String s2=new String("java");
+		
+		System.out.println("s1="+s1);
+		System.out.println("s2="+s2);
+		
+		StringBuffer sb1=new StringBuffer("java");
+		StringBuffer sb2=new StringBuffer("java");
+		StringBuffer  sb3=sb1;
+		
+		System.out.println("sb1="+sb1);
+		System.out.println("sb2="+sb2);
+		
+		System.out.println("s1.equals(s2) ="+s1.equals(s2));
+		System.out.println("sb1.equals(sb3) ="+sb1.equals(sb3));
+	}
+}
