@@ -1,0 +1,23 @@
+package in.itm.factory;
+import in.itm.service.impl.*;
+import in.itm.service.PaymentService;
+public class PaymentFactory 
+{
+	public static PaymentService ps;
+	public static PaymentService getObject(String  mode){
+		if (mode.equals("debit"))
+		{
+			ps= new DebitCard();
+		}
+		else if(mode.equals("gpay")){
+			ps=new GPay();
+		}
+		else if(mode.equals("ppay")){
+			ps=new PhonePay();
+		}
+		else{
+			ps=null;
+		}
+		return ps;
+	}
+}

@@ -1,0 +1,23 @@
+package in.itm.main;
+import in.itm.service.PayementService;
+import in.itm.factory.PaymentFactory;
+import in.itm.billing.Biller;
+import java.util.Scanner;
+import static java.lang.System.*;
+public class AbstractionInITMApp 
+{
+	public static void main(String[] args) 
+	{
+        PayementService  obj=PaymentFactory.getObject(args[0]);
+		
+		/*Connection con=DriverManager.getConnection("url","user","pass");
+		Statement st=con.createStatement();
+		ResultSet rs=st.executeQuery();*/
+		
+		out.println("Name of class of obj="+obj.getClass());
+		Scanner s1=new Scanner(in);
+		out.println("Please eneter amout to pay");
+		double  d=s1.nextDouble();
+		Biller.pay(obj,d);
+	}
+}

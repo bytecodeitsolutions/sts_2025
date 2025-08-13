@@ -1,0 +1,9 @@
+package p1;
+package p2;
+class PackageDemo2 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World!");
+	}
+}

@@ -1,0 +1,15 @@
+/*
+  abstract :
+  -----------
+  Hiding the internal implementations and just high ligh the set of services is called abstraction.
+*/
+
+
+abstract class AreaService
+{
+	
+}
+
+interface I1 extends AreaService
+{
+}
