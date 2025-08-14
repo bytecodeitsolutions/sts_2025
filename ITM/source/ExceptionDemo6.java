@@ -1,0 +1,35 @@
+class ExceptionDemo6 
+{
+	public String toString(){
+		return "hello";
+	}
+	public static void main(String[] args) 
+	{
+		ExceptionDemo6  obj=new ExceptionDemo6();
+		System.out.println(obj.toString());
+		
+		try{
+		   System.out.println(10/0);
+		}
+		catch(Exception e){
+		System.out.println(e.toString());//
+		}
+		
+	}
+}
+	//e.printStackTrace();
+			
+		/*	java.lang.ArithmeticException: / by zero
+        at ExceptionDemo6.main(ExceptionDemo6.java:6)*/
+		//java.lang.ArithmeticException: / by zero
+		/*
+		System.out.println(e.getMessage());/// by zero
+		String  s=e.getMessage();
+		if (s.equals("/ by zero"))
+		{
+			System.out.println("galti se 0 de diya tha");
+		}
+		else{
+			
+		 }
+		 */

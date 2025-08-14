@@ -13,18 +13,28 @@
 	  Unchecked exception
   customized exception handling  using try-catch
   control flow in try-catch
+  try with multiple catch block
   methods to print exception information
   finally block
   control flow in try -catch -finally
   different combinations of try-catch-finally
-  difference between final , finally and finalize
+  difference between final , finally and finalize***
+  ==============================================================
   our custom exception
     |=throw keyword 
 	|=throws keyword
   try with resources
   try with multi catch
   
+	
 	  
+	  try{
+	  
+	  }
+	  int  a=10;
+	  catch(){
+	  
+	  }
    
 */
 
@@ -39,7 +49,7 @@ class ExceptionDemo1
 		int  b=Integer.parseInt(args[1]);
 		System.out.println(a/b);
 		}catch(Exception e1){
-			e1.printStackTrace();
+			System.out.println("please enter 2 numbers");
 		}
 		
 		System.out.println("hello4");

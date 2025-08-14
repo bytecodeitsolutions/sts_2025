@@ -1,0 +1,45 @@
+/*
+   String handling in java:
+   ------------------------
+   What is difference between String and StringBuffer
+   1. String is immutable
+      and StringBuffer is mutable???????????????????????????????????????????????????????????????????????????????????????????????????????
+	  
+	  String  s1="java";
+		String  s2=new String("java");
+		StringBuffer  s3=new StringBuffer("java");
+		StringBuilder  s4=new StringBuilder("java");
+		System.out.println(s1);
+		System.out.println(s2);
+		System.out.println(s3);
+		System.out.println(s4);
+		
+		/*
+		String  s1=new String("raja");
+		String  s2=s1.concat("rani");
+		System.out.println("s1="+s1);
+		System.out.println("s2="+s2);
+		
+		StringBuffer sb1=new StringBuffer("raja");
+		sb1.append("rani");
+		System.out.println("sb1="+sb1);
+	
+	2. equals()
+	  
+*/
+class  StringDemo1
+{
+	public static void main(String[] args) 
+	{
+		String s1=new String("raja");
+		String s2=new String("raja");
+		
+		boolean x=s1.equals(s2);
+		System.out.println(x);
+		
+		StringBuffer s3=new StringBuffer("raja");
+		StringBuffer s4=new StringBuffer("raja");
+		boolean y=s3.equals(s4);
+		System.out.println(y);
+	}
+}

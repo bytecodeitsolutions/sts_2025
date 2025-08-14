@@ -1,0 +1,12 @@
+class ExceptionTest1 extends RuntimeException
+{
+	
+}
+class ExceptionDemo12 
+{
+	ExceptionTest1  e;
+	public static void main(String[] args) 
+	{
+		throw e;
+	}
+}

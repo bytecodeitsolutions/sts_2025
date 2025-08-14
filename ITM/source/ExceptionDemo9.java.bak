@@ -1,0 +1,50 @@
+/*
+   Why throws:
+   -----------
+   
+*/
+class InvalidAccountException extends Throwable
+{
+	InvalidAccountException(String msg){
+		super(msg);
+	}
+}
+class AccountVerfication
+{
+	void verifyCustomerAccount(String accountNumber) throws InvalidAccountException {
+		 if (accountNumber.equals("A12345"))
+		 {
+			 System.out.println("valid account");
+		 }
+		 else{
+			throw new InvalidAccountException("invalid account number");
+		 }
+	}
+}
+class ExceptionDemo9 
+{
+	public static void main(String[] args) 
+	{
+		AccountVerfication  obj=new AccountVerfication();
+		try{
+		obj.verifyCustomerAccount("a12345");
+		}catch(InvalidAccountException i){
+			String  m=i.getMessage();
+			if (m.equals("invalid account number"))
+			{
+				System.out.println("Please eneter a valid account number");
+			}
+		}
+	}
+}
+
+/*
+   InterruptedException:
+   ======================
+   This is a checked exception -checked by compiler
+     1. catch kro
+	 2. throw kro
+	 
+   ExceptionDemo9.java:11: error: unreported exception InterruptedException; must be caught or declared to be thrown
+                Thread.sleep(10);
+*/

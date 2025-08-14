@@ -1,0 +1,11 @@
+class TestException
+{
+	
+}
+class ExceptionDemo10 
+{
+	public static void main(String[] args)  throws TestException
+	{
+		
+	}
+}
