@@ -1,0 +1,24 @@
+/*
+   Defining a Thread by using lambda expression:
+   --------------------------------------------
+   
+   ->  this is sign of lambda:
+   ----------------------------
+   void m1();
+   
+   
+*/
+
+class  ThreadDemo5 
+{
+	public static void main(String[] args) 
+	{
+		Runnable r1=()->{ 
+			System.out.println("our thread " +Thread.currentThread().getName()); 
+		};
+		
+		Thread t1=new Thread(r1);
+		t1.start();
+		
+	}
+}

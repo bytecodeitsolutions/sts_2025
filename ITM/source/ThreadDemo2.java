@@ -1,0 +1,34 @@
+/*
+  Defining a Thread by using Runnable interface:
+  -----------------------------------------------
+    run()->to define task
+	start()-->to create thread and to call run method
+	
+	==================================================
+	
+*/
+class  MyRunnable implements Runnable
+{
+	@Override
+	public void run(){
+		for (int i=0;i<=10 ;i++ )
+		{
+			 System.out.println("samosa bnao ::"+Thread.currentThread().getName());
+		}
+	}
+}
+class ThreadDemo2
+{
+	public static void main(String[]  args){
+		
+		MyRunnable  mr=new MyRunnable();
+		Thread  t2=new Thread();
+		Thread  t1=new Thread(mr);
+		t1.run();
+		
+		for (int i=0;i<=10 ;i++ )
+		{
+			 System.out.println("main ::"+Thread.currentThread().getName());
+		}
+	}
+}

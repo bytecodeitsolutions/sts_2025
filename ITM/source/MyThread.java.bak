@@ -1,0 +1,56 @@
+/*
+   Multi-Threading:
+   ----------------
+   Introduction
+      Multi-tasking
+	  How to acheive multi-tasking
+	     |-Multi-Threading
+	 What is Thread??
+	 Defining , instantiating and creating a Thread
+	    |-By extending Thread class
+		|-By implementing Runnable interface
+		|-By using AIC
+		|-By using AII
+		|-By using Lambda expression
+	 Setting and getting name of a Thread
+	 Getting and setting Thread priority
+	 Daemon Thread
+	 Synchronization
+	   |-class level
+	   |-Object level
+	   |-method level
+	 methods to prevent Thread execution
+	   yield()
+	   join()
+	   sleep()
+	 Interthread communication using
+	   wait
+	   notify
+	   notifyAll
+	   
+	   ================================================
+	   
+	  
+	   class
+	     |-data
+		 |-methods
+		 
+		 java library--->packages--->
+		    java.lang
+			  |-Runnable (I)
+			  |-Thread (C)
+			  
+			  Defining Thread by exteding Thread class
+			  ========================================
+			  
+*/
+
+
+class MyThread extends Thread{
+	//@Override
+    public void ruN() {
+       
+    }
+
+}
+
