@@ -1,0 +1,1066 @@
+
+SQL*Plus: Release 10.2.0.1.0 - Production on Wed Aug 20 12:06:17 2025
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+SQL> connect itmuser/itmpass
+Connected.
+SQL> select * from emp;
+
+no rows selected
+
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+        20
+
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300
+        30
+
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+        20
+
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+        30
+
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+        10
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7788 SCOTT      ANALYST         7566 13-JUL-87       3000
+        20
+
+      7839 KING       PRESIDENT            17-NOV-81       5000
+        10
+
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7900 JAMES      CLERK           7698 03-DEC-81        950
+        30
+
+      7902 FORD       ANALYST         7566 03-DEC-81       3000
+        20
+
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+        10
+
+
+12 rows selected.
+
+SQL> set line 200;
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
+      7788 SCOTT      ANALYST         7566 13-JUL-87       3000                    20
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
+
+12 rows selected.
+
+SQL> set pagesize 40;
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
+      7788 SCOTT      ANALYST         7566 13-JUL-87       3000                    20
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
+
+12 rows selected.
+
+SQL> select * from emp where deptno=10;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
+
+SQL> select ename,sal,deptno from emp;
+
+ENAME             SAL     DEPTNO
+---------- ---------- ----------
+SMITH             800         20
+ALLEN            1600         30
+WARD             1250         30
+JONES            2975         20
+BLAKE            2850         30
+CLARK            2450         10
+SCOTT            3000         20
+KING             5000         10
+TURNER           1500         30
+JAMES             950         30
+FORD             3000         20
+MILLER           1300         10
+
+12 rows selected.
+
+SQL> select ename,sal,deptno from emp where deptno=20;;
+select ename,sal,deptno from emp where deptno=20;
+                                                *
+ERROR at line 1:
+ORA-00911: invalid character
+
+
+SQL> select ename,sal,deptno from emp where deptno=20;
+
+ENAME             SAL     DEPTNO
+---------- ---------- ----------
+SMITH             800         20
+JONES            2975         20
+SCOTT            3000         20
+FORD             3000         20
+
+SQL> select ename , sal , sal*12 from emp;
+
+ENAME             SAL     SAL*12
+---------- ---------- ----------
+SMITH             800       9600
+ALLEN            1600      19200
+WARD             1250      15000
+JONES            2975      35700
+BLAKE            2850      34200
+CLARK            2450      29400
+SCOTT            3000      36000
+KING             5000      60000
+TURNER           1500      18000
+JAMES             950      11400
+FORD             3000      36000
+MILLER           1300      15600
+
+12 rows selected.
+
+SQL> select ename , sal , sal*12 annsal from emp;
+
+ENAME             SAL     ANNSAL
+---------- ---------- ----------
+SMITH             800       9600
+ALLEN            1600      19200
+WARD             1250      15000
+JONES            2975      35700
+BLAKE            2850      34200
+CLARK            2450      29400
+SCOTT            3000      36000
+KING             5000      60000
+TURNER           1500      18000
+JAMES             950      11400
+FORD             3000      36000
+MILLER           1300      15600
+
+12 rows selected.
+
+SQL> select ename , sal , sal*12 annsal,job from emp where job!='CLERK';
+
+ENAME             SAL     ANNSAL JOB
+---------- ---------- ---------- ---------
+ALLEN            1600      19200 SALESMAN
+WARD             1250      15000 SALESMAN
+JONES            2975      35700 MANAGER
+BLAKE            2850      34200 MANAGER
+CLARK            2450      29400 MANAGER
+SCOTT            3000      36000 ANALYST
+KING             5000      60000 PRESIDENT
+TURNER           1500      18000 SALESMAN
+FORD             3000      36000 ANALYST
+
+9 rows selected.
+
+SQL> select ename , sal , sal*12 annsal,job from emp where job!='CLERk';
+
+ENAME             SAL     ANNSAL JOB
+---------- ---------- ---------- ---------
+SMITH             800       9600 CLERK
+ALLEN            1600      19200 SALESMAN
+WARD             1250      15000 SALESMAN
+JONES            2975      35700 MANAGER
+BLAKE            2850      34200 MANAGER
+CLARK            2450      29400 MANAGER
+SCOTT            3000      36000 ANALYST
+KING             5000      60000 PRESIDENT
+TURNER           1500      18000 SALESMAN
+JAMES             950      11400 CLERK
+FORD             3000      36000 ANALYST
+MILLER           1300      15600 CLERK
+
+12 rows selected.
+
+SQL> select ename , sal , sal*12 annsal,job from emp where job!='CLERK';
+
+ENAME             SAL     ANNSAL JOB
+---------- ---------- ---------- ---------
+ALLEN            1600      19200 SALESMAN
+WARD             1250      15000 SALESMAN
+JONES            2975      35700 MANAGER
+BLAKE            2850      34200 MANAGER
+CLARK            2450      29400 MANAGER
+SCOTT            3000      36000 ANALYST
+KING             5000      60000 PRESIDENT
+TURNER           1500      18000 SALESMAN
+FORD             3000      36000 ANALYST
+
+9 rows selected.
+
+SQL> select * from emp where job = ‘clerk’ and sal > 2000;
+
+no rows selected
+
+SQL> select * from emp where job = ‘clerk’ and sal > 1000;
+
+no rows selected
+
+SQL> select * from emp where job = ‘CLERK’ and sal > 1000;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
+
+SQL> select * from emp where job = ‘CLERK’ or sal > 1000;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450                    10
+      7788 SCOTT      ANALYST         7566 13-JUL-87       3000                    20
+      7839 KING       PRESIDENT            17-NOV-81       5000                    10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
+
+12 rows selected.
+
+SQL> select * from emp where job = ‘CLERK’;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30
+      7934 MILLER     CLERK           7782 23-JAN-82       1300                    10
+
+SQL> select * from emp where deptno = 20 or deptno = 30 or deptno = 50
+  2  or deptno = 70 or deptno =
+  3  80;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800                    20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300         30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500         30
+      7566 JONES      MANAGER         7839 02-APR-81       2975                    20
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850                    30
+      7788 SCOTT      ANALYST         7566 13-JUL-87       3000                    20
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0         30
+      7900 JAMES      CLERK           7698 03-DEC-81        950                    30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000                    20
+
+9 rows selected.
+
+
+
+=================================================================
+
+SQL*Plus: Release 10.2.0.1.0 - Production on Wed Aug 20 10:44:04 2025
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+SQL> conn sys as sysdba;
+Enter password:
+Connected.
+SQL> create user itmuser identified by itmpass;
+
+User created.
+
+SQL> show user;
+USER is "SYS"
+SQL> grant dba to itmuser;
+
+Grant succeeded.
+
+SQL> connect itmuser/itmpass;
+Connected.
+SQL> conn
+Enter user-name: itmuser
+Enter password:
+Connected.
+SQL> connect itmuser
+Enter password:
+Connected.
+SQL> show user;
+USER is "ITMUSER"
+SQL> select * from tab;
+
+no rows selected
+
+SQL> create table test(col1 number(5),col2 number(7,2));
+
+Table created.
+
+SQL> desc test;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ COL1                                               NUMBER(5)
+ COL2                                               NUMBER(7,2)
+
+SQL> insert into test values(12345,98765.65443);
+
+1 row created.
+
+SQL> select * from test;
+
+      COL1       COL2
+---------- ----------
+     12345   98765.65
+
+SQL> insert into test values(12345,987653.63);
+insert into test values(12345,987653.63)
+                              *
+ERROR at line 1:
+ORA-01438: value larger than specified precision allowed for this column
+
+
+SQL> insert into test values(12,99999.67);
+
+1 row created.
+
+SQL> select * from test;
+
+      COL1       COL2
+---------- ----------
+     12345   98765.65
+        12   99999.67
+
+SQL> create table test2(name varchar(20));
+
+Table created.
+
+SQL> desc test2;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ NAME                                               VARCHAR2(20)
+
+SQL> insert into test2 values('itm college');
+
+1 row created.
+
+SQL> select * from test2;
+
+NAME
+--------------------
+itm college
+
+SQL> select sysdate from dual;
+
+SYSDATE
+---------
+20-AUG-25
+
+SQL> select * from dual;
+
+D
+-
+X
+
+SQL> create table emp(empno number(5),ename varchar2(20),sal number(7,2),address varchar2(25));
+
+Table created.
+
+SQL> desc emp;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                              NUMBER(5)
+ ENAME                                              VARCHAR2(20)
+ SAL                                                NUMBER(7,2)
+ ADDRESS                                            VARCHAR2(25)
+
+SQL> create table emp1 as select * from emp;
+
+Table created.
+
+SQL> desc emp1;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                              NUMBER(5)
+ ENAME                                              VARCHAR2(20)
+ SAL                                                NUMBER(7,2)
+ ADDRESS                                            VARCHAR2(25)
+
+SQL> insert into emp values(111,'Raja',1000.00,'Gwalior');
+
+1 row created.
+
+SQL> select * from emp;
+
+     EMPNO ENAME                       SAL ADDRESS
+---------- -------------------- ---------- -------------------------
+       111 Raja                       1000 Gwalior
+
+SQL> create table emp2 as select * from emp;
+
+Table created.
+
+SQL> select * from emp2;
+
+     EMPNO ENAME                       SAL ADDRESS
+---------- -------------------- ---------- -------------------------
+       111 Raja                       1000 Gwalior
+
+SQL> create table emp3 as select * from emp where 1=3;
+
+Table created.
+
+SQL> select * from emp3;
+
+no rows selected
+
+SQL> desc emp3;
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                              NUMBER(5)
+ ENAME                                              VARCHAR2(20)
+ SAL                                                NUMBER(7,2)
+ ADDRESS                                            VARCHAR2(25)
+
+SQL> select * from emp;
+
+     EMPNO ENAME                       SAL ADDRESS
+---------- -------------------- ---------- -------------------------
+       111 Raja                       1000 Gwalior
+
+SQL> alter table emp add(deptno number(3));
+
+Table altered.
+
+SQL> select * from emp;
+
+     EMPNO ENAME                       SAL ADDRESS                       DEPTNO
+---------- -------------------- ---------- ------------------------- ----------
+       111 Raja                       1000 Gwalior
+
+SQL> set line 200;
+SQL> set pagesize 50;
+SQL> select * from emp;
+
+     EMPNO ENAME                       SAL ADDRESS                       DEPTNO
+---------- -------------------- ---------- ------------------------- ----------
+       111 Raja                       1000 Gwalior
+
+SQL> set line 100;
+SQL> select * from emp;
+
+     EMPNO ENAME                       SAL ADDRESS                       DEPTNO
+---------- -------------------- ---------- ------------------------- ----------
+       111 Raja                       1000 Gwalior
+
+SQL> select * from emp;
+
+     EMPNO ENAME                       SAL ADDRESS                       DEPTNO
+---------- -------------------- ---------- ------------------------- ----------
+       111 Raja                       1000 Gwalior
+
+SQL> set pagesize 50;
+SQL> setline 200;
+SP2-0734: unknown command beginning "setline 20..." - rest of line ignored.
+SQL> set line 200;
+SQL> select * from emp;
+
+     EMPNO ENAME                       SAL ADDRESS                       DEPTNO
+---------- -------------------- ---------- ------------------------- ----------
+       111 Raja                       1000 Gwalior
+
+SQL> desc emp;
+ Name                                                                                                        Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ EMPNO                                                                                                                NUMBER(5)
+ ENAME                                                                                                                VARCHAR2(20)
+ SAL                                                                                                                  NUMBER(7,2)
+ ADDRESS                                                                                                              VARCHAR2(25)
+ DEPTNO                                                                                                               NUMBER(3)
+
+SQL> alter table emp modify(empno number(10));
+
+Table altered.
+
+SQL> desc emp;
+ Name                                                                                                        Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ EMPNO                                                                                                                NUMBER(10)
+ ENAME                                                                                                                VARCHAR2(20)
+ SAL                                                                                                                  NUMBER(7,2)
+ ADDRESS                                                                                                              VARCHAR2(25)
+ DEPTNO                                                                                                               NUMBER(3)
+
+SQL> alter table emp modify(eno number(10));
+alter table emp modify(eno number(10))
+                       *
+ERROR at line 1:
+ORA-00904: "ENO": invalid identifier
+
+
+SQL> alter table emp modify(eno varchar2(10));
+alter table emp modify(eno varchar2(10))
+                       *
+ERROR at line 1:
+ORA-00904: "ENO": invalid identifier
+
+
+SQL> alter table emp modify(empno varchar2(10));
+alter table emp modify(empno varchar2(10))
+                       *
+ERROR at line 1:
+ORA-01439: column to be modified must be empty to change datatype
+
+
+SQL> select * from emp;
+
+     EMPNO ENAME                       SAL ADDRESS                       DEPTNO
+---------- -------------------- ---------- ------------------------- ----------
+       111 Raja                       1000 Gwalior
+
+SQL> alter table emp modify(deptno varchar2(20));
+
+Table altered.
+
+SQL> alter table emp drom deptno;
+alter table emp drom deptno
+                *
+ERROR at line 1:
+ORA-01735: invalid ALTER TABLE option
+
+
+SQL> alter table emp drop deptno;
+alter table emp drop deptno
+                     *
+ERROR at line 1:
+ORA-00905: missing keyword
+
+
+SQL> alter table emp drop column deptno;
+
+Table altered.
+
+SQL> desc emp;
+ Name                                                                                                        Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ EMPNO                                                                                                                NUMBER(10)
+ ENAME                                                                                                                VARCHAR2(20)
+ SAL                                                                                                                  NUMBER(7,2)
+ ADDRESS                                                                                                              VARCHAR2(25)
+
+SQL> select * from emp1;
+
+no rows selected
+
+SQL> desc emp1;
+ Name                                                                                                        Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ EMPNO                                                                                                                NUMBER(5)
+ ENAME                                                                                                                VARCHAR2(20)
+ SAL                                                                                                                  NUMBER(7,2)
+ ADDRESS                                                                                                              VARCHAR2(25)
+
+SQL> alter table emp drop(empno,ename,sal,address);
+alter table emp drop(empno,ename,sal,address)
+*
+ERROR at line 1:
+ORA-12983: cannot drop all columns in a table
+
+
+SQL> alter table emp drop(ename,sal,address);
+
+Table altered.
+
+SQL> drop table emp1;
+
+Table dropped.
+
+SQL> select * from emp;
+
+     EMPNO
+----------
+       111
+
+SQL> select * from emp2;
+
+     EMPNO ENAME                       SAL ADDRESS
+---------- -------------------- ---------- -------------------------
+       111 Raja                       1000 Gwalior
+
+SQL> select * from emp3;
+
+no rows selected
+
+SQL> insert into emp2 values(222,'Rani',2000,'LKO');
+
+1 row created.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> truncat table emp2;
+SP2-0734: unknown command beginning "truncat ta..." - rest of line ignored.
+SQL> truncate table emp2;
+
+Table truncated.
+
+SQL> select * from emp2;
+
+no rows selected
+
+SQL> rollback;
+
+Rollback complete.
+
+SQL> select * from emp2;
+
+no rows selected
+
+SQL> desc emp2;
+ Name                                                                                                        Null?    Type
+ ----------------------------------------------------------------------------------------------------------------- -------- ----------------------------------------------------------------------------
+ EMPNO                                                                                                                NUMBER(5)
+ ENAME                                                                                                                VARCHAR2(20)
+ SAL                                                                                                                  NUMBER(7,2)
+ ADDRESS                                                                                                              VARCHAR2(25)
+
+SQL> insert into emp2 values(&empno,&ename,&sal,&address);
+Enter value for empno: 333
+Enter value for ename: 'Ram'
+Enter value for sal: 3000
+Enter value for address: 'Indore'
+old   1: insert into emp2 values(&empno,&ename,&sal,&address)
+new   1: insert into emp2 values(333,'Ram',3000,'Indore')
+
+1 row created.
+
+SQL> /
+Enter value for empno: 444
+Enter value for ename: 'Raju'
+Enter value for sal: 4000
+Enter value for address: 'MP'
+old   1: insert into emp2 values(&empno,&ename,&sal,&address)
+new   1: insert into emp2 values(444,'Raju',4000,'MP')
+
+1 row created.
+
+SQL> select * from emp2;
+
+     EMPNO ENAME                       SAL ADDRESS
+---------- -------------------- ---------- -------------------------
+       333 Ram                        3000 Indore
+       444 Raju                       4000 MP
+
+SQL> insert into emp2(empno,ename,address) values(555,'XYZ','pqr');
+
+1 row created.
+
+SQL> select * from emp2;
+
+     EMPNO ENAME                       SAL ADDRESS
+---------- -------------------- ---------- -------------------------
+       333 Ram                        3000 Indore
+       444 Raju                       4000 MP
+       555 XYZ                             pqr
+
+SQL> update emp2 set ename='Ramji' where empno=333;
+
+1 row updated.
+
+SQL> select * from emp2;
+
+     EMPNO ENAME                       SAL ADDRESS
+---------- -------------------- ---------- -------------------------
+       333 Ramji                      3000 Indore
+       444 Raju                       4000 MP
+       555 XYZ                             pqr
+
+SQL> update emp2 set sal=5000 where empno=555;
+
+1 row updated.
+
+SQL> select * from emp2;
+
+     EMPNO ENAME                       SAL ADDRESS
+---------- -------------------- ---------- -------------------------
+       333 Ramji                      3000 Indore
+       444 Raju                       4000 MP
+       555 XYZ                        5000 pqr
+
+SQL> update emp2 set sal=null where empno=555;
+
+1 row updated.
+
+SQL> select * from emp2;
+
+     EMPNO ENAME                       SAL ADDRESS
+---------- -------------------- ---------- -------------------------
+       333 Ramji                      3000 Indore
+       444 Raju                       4000 MP
+       555 XYZ                             pqr
+
+SQL> delete from emp2 where empno=333;
+
+1 row deleted.
+
+SQL> select * from emp2;
+
+     EMPNO ENAME                       SAL ADDRESS
+---------- -------------------- ---------- -------------------------
+       444 Raju                       4000 MP
+       555 XYZ                             pqr
+
+SQL> delete from emp2;
+
+2 rows deleted.
+
+SQL> select * from emp2;
+
+no rows selected
+
+SQL> rollback;
+
+Rollback complete.
+
+SQL> select * from emp2;
+
+no rows selected
+
+SQL> select * from emp2;
+
+no rows selected
+
+SQL> select * from emp1;
+select * from emp1
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> select * from emp;
+
+     EMPNO
+----------
+       111
+
+SQL> insert into emp values(222);
+
+1 row created.
+
+SQL> insert into emp values(333);
+
+1 row created.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> select * from emp;
+
+     EMPNO
+----------
+       111
+       222
+       333
+
+SQL> delete from emp;
+
+3 rows deleted.
+
+SQL> rollback;
+
+Rollback complete.
+
+SQL> select * from emp;
+
+     EMPNO
+----------
+       111
+       222
+       333
+
+SQL> CREATE TABLE DEPT (
+  2      deptno   NUMBER(2) PRIMARY KEY,
+  3      dname    VARCHAR2(14),
+  4      loc      VARCHAR2(13)
+  5  );
+
+Table created.
+
+SQL> CREATE TABLE EMP (
+  2      empno    NUMBER(4) PRIMARY KEY,
+  3      ename    VARCHAR2(10),
+  4      job      VARCHAR2(9),
+  5      mgr      NUMBER(4),
+  6      hiredate DATE,
+  7      sal      NUMBER(7,2),
+  8      comm     NUMBER(7,2),
+  9      deptno   NUMBER(2),
+ 10      CONSTRAINT fk_dept FOREIGN KEY (deptno) REFERENCES DEPT(deptno)
+ 11  );
+CREATE TABLE EMP (
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+SQL> drop table emp;
+
+Table dropped.
+
+SQL> CREATE TABLE EMP (
+  2      empno    NUMBER(4) PRIMARY KEY,
+  3      ename    VARCHAR2(10),
+  4      job      VARCHAR2(9),
+  5      mgr      NUMBER(4),
+  6      hiredate DATE,
+  7      sal      NUMBER(7,2),
+  8      comm     NUMBER(7,2),
+  9      deptno   NUMBER(2),
+ 10      CONSTRAINT fk_dept FOREIGN KEY (deptno) REFERENCES DEPT(deptno)
+ 11  );
+
+Table created.
+
+SQL> INSERT INTO DEPT VALUES (10, 'ACCOUNTING', 'NEW YORK');
+
+1 row created.
+
+SQL> INSERT INTO DEPT VALUES (20, 'RESEARCH',   'DALLAS');
+
+1 row created.
+
+SQL> INSERT INTO DEPT VALUES (30, 'SALES',      'CHICAGO');
+
+1 row created.
+
+SQL> INSERT INTO DEPT VALUES (40, 'OPERATIONS', 'BOSTON');
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES (7369, 'SMITH', 'CLERK', 7902, DATE '1980-12-17', 800, NULL, 20);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES (7499, 'ALLEN', 'SALESMAN', 7698, DATE '1981-02-20', 1600, 300, 30);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES (7521, 'WARD',  'SALESMAN', 7698, DATE '1981-02-22', 1250, 500, 30);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES (7566, 'JONES', 'MANAGER', 7839, DATE '1981-04-02', 2975, NULL, 20);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES (7698, 'BLAKE', 'MANAGER', 7839, DATE '1981-05-01', 2850, NULL, 30);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES (7782, 'CLARK', 'MANAGER', 7839, DATE '1981-06-09', 2450, NULL, 10);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES (7788, 'SCOTT', 'ANALYST', 7566, DATE '1987-07-13', 3000, NULL, 20);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES (7839, 'KING',  'PRESIDENT', NULL, DATE '1981-11-17', 5000, NULL, 10);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES (7844, 'TURNER','SALESMAN', 7698, DATE '1981-09-08', 1500, 0, 30);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES (7900, 'JAMES', 'CLERK', 7698, DATE '1981-12-03', 950, NULL, 30);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES (7902, 'FORD',  'ANALYST', 7566, DATE '1981-12-03', 3000, NULL, 20);
+
+1 row created.
+
+SQL> INSERT INTO EMP VALUES (7934, 'MILLER','CLERK', 7782, DATE '1982-01-23', 1300, NULL, 10);
+
+1 row created.
+
+SQL> select * from emp;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM     DEPTNO
+---------- ---------- --------- ---------- --------- ---------- ---------- ----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800               20
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300    30
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500    30
+      7566 JONES      MANAGER         7839 02-APR-81       2975               20
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850               30
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450               10
+      7788 SCOTT      ANALYST         7566 13-JUL-87       3000               20
+      7839 KING       PRESIDENT            17-NOV-81       5000               10
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0    30
+      7900 JAMES      CLERK           7698 03-DEC-81        950               30
+      7902 FORD       ANALYST         7566 03-DEC-81       3000               20
+      7934 MILLER     CLERK           7782 23-JAN-82       1300               10
+
+12 rows selected.
+
+SQL> select * from dept;
+
+    DEPTNO DNAME          LOC
+---------- -------------- -------------
+        10 ACCOUNTING     NEW YORK
+        20 RESEARCH       DALLAS
+        30 SALES          CHICAGO
+        40 OPERATIONS     BOSTON
+
+SQL> commit;
+
+Commit complete.
+
+SQL>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
