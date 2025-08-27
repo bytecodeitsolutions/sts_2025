@@ -1,0 +1,169 @@
+/*
+    Object oriented programming:
+	----------------------------
+	
+	design==>class
+	----------------
+	properties==>data
+	    Identifier
+
+		reserved words
+		 
+		data type
+		primitive
+		Object==>memory
+		   
+		Literals:
+		--------
+		Types of variables:-
+		-----------------------
+		  purpose and positions:
+		  ----------------------
+		  static==>
+		  1.
+		  2.
+		  3.
+		  4. 
+		  5.
+		  6.
+		  7.
+		  
+		  non static:-
+		  1.
+		  2.
+		  3.
+		  4.
+		  5.
+		  6.
+		  7.
+		  
+		  local :
+		  --------
+		  1. 
+		  2.
+		  3. 
+		  4.
+		  5.
+		  6.
+		  7.
+		
+	functionalities
+	   methodanme(identifier)
+	   parameter(datatype=variables=local)
+	   return type(data type)
+	   exception 
+	   
+	   int   sum(int  a, int  b){
+	    
+	   }
+	   
+	   
+	   ClassName  obj=new ClassName();
+	   ======================================
+	   ===========================================
+	   concepts:
+	     |-Data hiding:
+		 |-Encapsulation:
+		 |-Abstraction: interface , Abstract class
+		   |-1.
+		   |-2.
+		   |-3. public static final
+		   |-4. Constriuctor
+		   |-5. 
+		   |-6.
+		     private 
+			 
+			 class Test{
+			    private int  a;
+				
+				void  setA(int  a){
+				   this.a=a;
+				}
+				
+			 }
+			 class B{
+			 
+			  
+			 }
+	   
+	   Inheritance:
+	   ------------
+	   reusability
+	   extends 
+	   
+	   
+	   A  extends B,C,D
+	   ------------------------------------------------------
+	   Polymorphism:
+	   -------------
+	   flexibility:
+	   |-compiletime
+	       |-method overloading
+		   |-method hiding
+	   |-runtime
+	       |-Overriding
+	      
+	   
+	
+	   abstract class Parent
+	   
+	   ===============================================
+	   
+	   
+	   
+{
+	int  a;
+	int  b;
+		
+	Parent(int  a,int  b){
+		this.a=a;
+		this.b=b;
+	}
+		void sum(){
+			System.out.println(a+b);
+		}
+}
+class Child extends Parent
+{
+	int   a;
+	int   b;
+	Child(int  x,int  y){
+		super(x,y);
+		a=x;
+		b=y;
+		System.out.println(this.hashCode());
+		System.out.println(super.hashCode());
+	}
+	void sum(){
+		System.out.println(a+b);
+		super.sum();
+	}
+}
+*/
+
+class System1
+{
+	static PrintStream1  out;
+	
+	static{
+		out=new PrintStream1();
+	}
+	
+}
+class PrintStream1
+{
+	void print(String  msg){
+		System.out.println(msg);
+	}
+	
+	void print(int  msg){
+		System.out.println(msg);
+	}
+}
+class Check
+{
+	public static void main(String[]  args){
+		System1.out.print("hello");
+		System1.out.print(100);
+	}
+}
