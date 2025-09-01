@@ -1,0 +1,38 @@
+class  FirstProgram
+{
+	int  a;
+	int b;
+	public static void main(String[] args) 
+	{
+		FirstProgram obj=new FirstProgram();
+		System.out.println(obj.a+obj.b);
+		
+	}
+}
+class  FirstProgram1
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World1!");
+		
+	}
+}
+
+class  FirstProgram2
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World2!");
+		
+	}
+}
+
+class  FirstProgram3
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World3!");
+		
+	}
+}
+

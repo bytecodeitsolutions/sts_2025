@@ -1,0 +1,40 @@
+/*
+  Writing , saving , compiling and executing the java program:=
+  -------------------------------------------------------------
+  ClassName.java
+  AnyName.java
+  
+  FirstProgram.java
+  javac FirstProgram.java
+  java  FirstProgram
+ ========================================================== 
+  ITM.java
+  
+  
+  
+*/
+class FirstProgram 
+{
+	static{
+		System.out.println("static block1");
+	}
+	public static void main(String[] args) 
+	{
+		//FirstProgram1 obj=new FirstProgram1();
+		System.out.println("Welcome to java world1");
+	}
+}
+class FirstProgram1 
+{
+	static{
+	System.out.println("static block-2");
+	}
+	public static void main(String[] args) 
+	{
+		System.out.println("Welcome to java world2");
+	}
+}
+class FirstProgram2 
+{
+	
+}

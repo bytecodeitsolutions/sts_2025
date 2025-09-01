@@ -1,0 +1,37 @@
+/*
+   Object oriented programming:
+   -----------------------------
+   Syntax for class (Design):
+   ---------------------------
+   
+   class  ClassName{
+   
+   
+   }
+   
+   Syntax to create an object:
+   -------------------------------
+   
+   ClassName  object_reference_variable=new ClassName();
+   
+   class  Kutta{
+   
+   }
+   
+   Kutta   k1=new Kutta();
+   int     k2=10;
+   
+*/
+class Kutta 
+{
+	void bark(){
+		System.out.println("kutta bhok rha hai "+hashCode());
+	}
+	public static void main(String[] args) 
+	{
+		new Kutta().bark();
+		new Kutta().bark();
+		new Kutta().bark();
+		
+	}
+}
