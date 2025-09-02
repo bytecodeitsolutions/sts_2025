@@ -1,0 +1,27 @@
+class Test
+{
+	int   a;
+	int   b;
+	int sum(int  a,int b){
+		int  c=this.a+b;
+		System.out.println(c);
+		return c;
+	}
+	void  sub(){
+		System.out.println(new Test().sum(1,2));
+	}
+}
+class LocalVariableDemo1 
+{
+	public static void main(String[] args) 
+	{
+		Test  t1=new Test();
+		t1.a=100;
+		t1.b=200;
+		t1.sum(10,20);
+	}
+}
+
+/*
+1.
+*/

@@ -1,0 +1,18 @@
+class Employee
+{
+	int  empId;
+	
+}
+class  NonstaticDemo1
+{
+	public static void main(String[] args) 
+	{
+		Employee  e1=new Employee();
+		Employee  e2=new Employee();
+	
+		System.out.println(e1.empId);//0
+		
+		System.out.println(e2.empId);//0
+		
+	}
+}
