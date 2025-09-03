@@ -1,0 +1,100 @@
+/*
+  Syntax for method:
+  ------------------
+  
+  returnType  methodName() {
+  
+  }
+  
+  void   login(){
+  
+  
+  }
+  
+  void  registration(){
+  
+  
+  }
+  
+  void  registartion(int  rno,String  name, String address){
+  
+  }
+  
+  void  registration(Student  s){
+  
+  }
+  
+  void  displayStudentName(String  name){
+  
+  }
+  
+  void  displayStudent(Student  name){
+  
+  }
+  
+  void  displayAllStudents(Student[]  s){
+  
+  }
+  
+  =============================
+  
+  class  Student{
+    int rno;
+	String name;
+	String address;
+	long adharNo;
+	long mobileNo;
+	
+  }
+  
+  =========================================================
+  
+  Method Parameter:-
+  -------------------
+  primitive value:
+  
+  non primitive values
+*/
+
+class Tiffin
+{
+	String  item1;
+	String  item2;
+	String  item3;
+	String  item4;
+	
+	void  openTiffin(){
+		System.out.println("tiffin is opened now get item");
+	}
+	
+	void closeTiffin(){
+		System.out.println("khana kha liya hai to tiffin bnd kro");
+	}
+}
+class Friend
+{
+	void getTiffin(Tiffin  obj){
+		obj.openTiffin();
+		System.out.println(obj.item1);
+		System.out.println(obj.item2);
+		System.out.println(obj.item3);
+		System.out.println(obj.item4);
+		obj.closeTiffin();
+	}
+}
+class  MethodDemo1
+{
+	public static void main(String[] args) 
+	{
+		Friend  f1=new Friend();
+		Tiffin  t1=new Tiffin();
+		Tiffin  t2=new Tiffin();
+		t1.item1="pulaw";
+		t1.item2="Paneer";
+		t1.item3="puri";
+		t1.item4="rayta";
+		
+		f1.getTiffin(t2);
+	
+	}
+}

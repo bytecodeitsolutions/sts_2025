@@ -1,0 +1,38 @@
+/*
+   static variable ko memory kb milti hai aur ek bar hi kyu milti hai
+*/
+
+class Test1
+{
+	static{
+		System.out.println("static block from Test1");
+	}
+	{
+		System.out.println("non static block from Test1");
+	}
+}
+class Test2
+{
+	static{
+		System.out.println("static block from Test2");
+	}
+	{
+		System.out.println("non static block from Test2");
+	}
+}
+class  StaticVarDemo2
+{
+	static{
+		System.out.println("static block from StaticVarDemo2");
+	}
+	public static void main(String[] args) 
+	{
+		System.out.println("main method");
+		Test1 t1=new Test1();
+		Test2 t2=new Test2();
+		Test1 t3=new Test1();
+		Test2 t4=new Test2();
+		Test1 t5=new Test1();
+		Test2 t6=new Test2();
+	}
+}

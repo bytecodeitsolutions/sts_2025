@@ -1,0 +1,47 @@
+/*
+   To define data we need to learn:
+      |-Identifier
+	  |-Reserved words
+	  |-Data types
+	  |-Literals
+	  |-Types of variables
+	  
+	  
+Based on purpose and positions
+---------------------------------
+1. static variable
+2. non static variable
+3. local variable
+
+
+*/
+class  Customer
+{
+	static String shopName;//declaration
+	       String customerName;
+	
+	public static void main(String[]  args){
+		Customer  c1=new Customer();//object creation
+		Customer  c2=new Customer();
+		Customer  c3=new Customer();
+		Customer  c4=new Customer();
+		c1.shopName="ABC Shop";
+		c2.shopName="XYZ Shop";//data initialization
+		
+		c1.customerName="Raja";
+		c2.customerName="Rani";
+		c3.customerName="Raju";
+		
+		
+		System.out.println(c1.shopName);
+		System.out.println(c2.shopName);
+		System.out.println(c3.shopName);
+		System.out.println(c4.shopName);
+		
+		System.out.println(c1.customerName);
+		System.out.println(c2.customerName);
+		System.out.println(c3.customerName);
+		System.out.println(c4.customerName);
+	}
+	
+}

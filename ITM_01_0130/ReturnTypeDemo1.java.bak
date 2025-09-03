@@ -1,0 +1,46 @@
+class Customer
+{
+	int  customerId;
+	String customerName;
+	String address;
+	Account  account;
+    
+	Customer(Account  account){ //we will learn by tomorrow
+		this.account=account;
+	}
+	
+	Account getAccount(){
+		return account;
+	}
+	
+	Customer  getCustomerDetails(Customer  c1){
+		Account  acc=c1.getAccount();
+		System.out.println(acc.accountId);
+		System.out.println(acc.accountNumber);
+		System.out.println(acc.balance);
+		return  c1;
+		
+	}
+}
+class Account
+{
+	int  accountId;
+	long accountNumber;
+	float  balance;
+	Account  a1;
+	
+	void setAccount(Account  a1){
+		this.a1=a1;
+	}
+	
+	Account  getAccount(){
+		return  a1;
+	}
+}
+class ReturnTypeDemo1 
+{
+	public static void main(String[] args) 
+	{
+		Customer  c1=new Customer();
+	}
+}

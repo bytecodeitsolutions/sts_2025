@@ -1,0 +1,26 @@
+class Kutta
+{
+	 void bark(){
+		System.out.println("barking");
+	 }
+}
+class  Student
+{
+	static int  a;//0
+	static float b;//0.0
+	static boolean c;//false
+	static char d;//space
+	static String e;//null
+	static Student  f;//null
+	static Kutta   g;//null
+	
+	public static void main(String[] args) 
+	{
+		Student.a=10;
+		Student.g=new Kutta();
+		System.out.println(g);
+		g.bark();
+		g.run();
+	}
+}
+
