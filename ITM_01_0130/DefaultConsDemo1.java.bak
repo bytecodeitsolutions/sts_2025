@@ -1,0 +1,19 @@
+class Table
+{
+	
+}
+class Chair
+{
+	Chair(String  name){
+		
+	}
+}
+public class  DefaultConsDemo1
+{
+	public static void main(String[] args) 
+	{
+		new Table();
+		new Chair(10);
+		new DefaultConsDemo1();
+	}
+}

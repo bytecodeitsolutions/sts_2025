@@ -1,0 +1,57 @@
+class PolyDemo1 
+{
+	public static void main(String[] args) 
+	{
+		/*
+		String s1=new String("java");
+		String s2=new String("java");
+		System.out.println("s1="+s1);
+		System.out.println("s2="+s2);
+		
+		boolean flag1=s1.equals(s2);
+		
+		StringBuffer s3=new StringBuffer("java");
+		StringBuffer s4=new StringBuffer("java");
+		System.out.println("s3="+s3);
+		System.out.println("s4="+s4);
+		
+		boolean flag2=s3.equals(s4);
+		
+		if (flag2)
+		{
+			System.out.println("college is opened");
+		}
+		else{
+			System.out.println("college is closed");
+		}
+		
+		*/
+		
+		java.util.Set  h1=new java.util.HashSet();
+		h1.add(100);
+		h1.add(10);
+		h1.add(1);
+		h1.add(5);
+		h1.add(5);
+		h1.add(7);
+		System.out.println(h1);
+		
+		java.util.Set  h2=new java.util.LinkedHashSet();
+		h2.add(100);
+		h2.add(10);
+		h2.add(1);
+		h2.add(5);
+		h2.add(5);
+		h2.add(7);
+		System.out.println(h2);
+		
+		java.util.Set  h3=new java.util.TreeSet();
+		h3.add(100);
+		h3.add(10);
+		h3.add(1);
+		h3.add(5);
+		h3.add(5);
+		h3.add(7);
+		System.out.println(h3);
+	}
+}

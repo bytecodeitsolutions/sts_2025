@@ -1,0 +1,12 @@
+class Test1
+{
+}
+class Test2
+{
+}
+public class InhDemo3 extends Test1,Test2
+{
+	public static void main(String[] args) 
+	{
+	}
+}

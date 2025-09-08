@@ -1,0 +1,90 @@
+/*
+  Data hiding:
+  ------------
+*/
+
+class Account
+{
+	private long accountNumber;
+	private float minBalance;
+	
+	Account(long accountNumber,float minBalance){
+		this.accountNumber=accountNumber;
+		this.minBalance=minBalance;
+	}
+	
+	
+	
+	long getAccountNumber(){
+		//verifyCustomer
+		return accountNumber;
+	}
+	String getAccountBalance(Customer  obj){
+		boolean  check=CustomerVerification.verifyCustomer(obj);
+		if (check)
+		{
+			return "Balance in your account "+accountNumber +" is ="+minBalance;
+		}
+		else{
+			return "Invalid customer username and password";
+		}
+		
+	}
+}
+
+class Customer extends Account
+{
+	private String customerName;
+	private int customerId;
+	private String address;
+	private String password;
+	private Account  account;
+	Customer(String customerName,String password,int customerId,String address,Account account){
+		super();
+		
+		this.customerName=customerName;
+		this.password=password;
+		this.customerId=customerId;
+		this.address=address;
+		this.account=account;
+	}
+	
+	String getCustomerName(){
+		return customerName;
+	}
+	
+	String getPassword(){
+		return password;
+	}
+	
+	 void getCustomerDetails(Customer  c){
+		System.out.println("Customer Name is="+customerName);
+		System.out.println("Customer Id is="+customerId);
+		System.out.println("Customer address is="+address);
+		System.out.println("Account number is="+account.getAccountNumber());
+		System.out.println("Balance is="+account.getAccountBalance(c));
+	 }
+}
+
+class CustomerVerification
+{
+	static boolean flag=false;
+	
+	static boolean verifyCustomer(Customer c1){
+		if (c1.getCustomerName().equalsIgnoreCase("Raja") && c1.getPassword().equals("rani"))
+		{
+			flag=true;
+		}
+		return flag;
+	}
+}
+
+class  DataHidingDemo1
+{
+	public static void main(String[] args) 
+	{
+		Account  a1=new Account(112233L,20000.0f);
+		Customer  c1=new Customer("raja","Rani",1111,"Gwalior",a1);
+		c1.getCustomerDetails(c1);
+	}
+}

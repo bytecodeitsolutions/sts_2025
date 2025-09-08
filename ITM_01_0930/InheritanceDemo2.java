@@ -1,0 +1,29 @@
+class Tiger
+{
+	void m1(){
+		System.out.println("from tiger");
+	}
+}
+class Dog extends Tiger
+{
+	void m2(){
+		System.out.println("from dog");
+	}
+}
+class Puppy extends Dog
+{
+	void m3(){
+		System.out.println("from puppy");
+	}
+}
+class InheritanceDemo2 
+{
+	public static void main(String[] args) 
+	{
+		Tiger  t1=new Puppy();
+		Puppy  d1=(Puppy)t1;
+		d1.m1();
+		d1.m2();
+		d1.m3();
+	}
+}

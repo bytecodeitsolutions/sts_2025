@@ -1,0 +1,29 @@
+
+class Student
+{
+	int rno;
+	String name;
+	
+	Student(int x,String y){
+		System.out.println(this.hashCode());
+		rno=this.x;
+		name=this.y;
+	}
+	
+	void getData(){
+		System.out.println("rno="+rno +" name="+name);
+	}
+	
+}
+class ThisDemo1 
+{
+	public static void main(String[] args) 
+	{
+		Student  s1=new Student(101,"Raja");
+		Student  s2=new Student(102,"Rani");
+		System.out.println("s1 ka address="+s1.hashCode());
+		System.out.println("s2 ka address="+s2.hashCode());
+		s1.getData();
+		s2.getData();
+	}
+}

@@ -1,0 +1,31 @@
+/*
+  Rules to define java constructor:
+  --------------------------------
+  1. class and constrcutor name must be same and method body as method
+  
+  modifiers ClassName(parameter){
+  
+  }
+  
+  2. 
+  
+  3.
+  
+  4.
+  
+*/
+class  ConsDemo2
+{
+	ConsDemo2(){
+		System.out.println("This is 0 param cons "+hashCode());
+	}
+	public static void main(String[] args) 
+	{
+		new ConsDemo2();
+		new ConsDemo2();
+		new ConsDemo2();
+		new ConsDemo2();
+		new ConsDemo2();
+		
+	}
+}

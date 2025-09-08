@@ -1,0 +1,66 @@
+/*
+   Data Hiding:
+   ------------
+   private 
+   
+*/
+class User
+{
+	static boolean verifyUser(int  pin){
+		if (pin==1111)
+		{
+			return true;
+		}
+		else if (pin==2222)
+		{
+			return true;
+		}
+		else{
+		   return false;
+		}
+	}
+}
+class Account
+{
+	private double balance;
+	
+	String getBalance()
+	{
+		//logic logic
+		boolean flag=User.verifyUser(2222);
+		if (flag)
+		{
+			return "balance is="+balance;
+		}
+		else{
+			return "invalid pin number";
+		}
+	}
+	
+	void setBalance(double balance){
+		//validation logic
+		this.balance=balance;
+	}
+}
+class PhonePay extends Account
+{
+	void checkBalance(){
+		System.out.println("Balance using phone pay is ="+getBalance());
+	}
+}
+class GPay extends Account
+{
+	void viewBalance(){
+		System.out.println("Balance using gpay is ="+getBalance());
+	}
+}
+class  DataHidingDemo1
+{
+	public static void main(String[] args) 
+	{
+		
+		PhonePay  p1=new PhonePay();
+		p1.setBalance(1000);
+		p1.checkBalance();
+	}
+}

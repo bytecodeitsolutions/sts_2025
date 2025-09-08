@@ -1,0 +1,22 @@
+class Student
+{
+	int rno;
+	String name;
+	
+	Student(int  rno,String name){
+		this.rno=rno;
+		this.name=name;
+	}
+	void displayStudentData(){
+		System.out.println(rno +" "+name);
+	}
+}
+class ConstructorDemo1 
+{
+	public static void main(String[] args) 
+	{
+		Student  s1=new Student(101,"Raja");
+		//Student  s2=new Student();
+		s1.displayStudentData();
+	}
+}
