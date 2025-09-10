@@ -1,0 +1,15 @@
+import static java.lang.System.*;
+//import static java.lang.Integer.MAX_VALUE;
+import static java.lang.Byte.*;
+
+class StaticImportDemo1 
+{
+	public static void main(String[] args) 
+	{
+		//int MAX_VALUE=100;
+		out.println(MAX_VALUE);
+		
+	
+		
+	}
+}

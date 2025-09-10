@@ -1,0 +1,32 @@
+/*
+   Polymorphism:
+   ------------
+   
+*/
+
+class Parent
+{
+	
+}
+class Child extends Parent
+{
+	
+}
+
+class OLTest1
+{
+	void m1(int  a,float  f){
+		System.out.println("int-float");
+	}
+	void m1(float  a,int  b){
+		System.out.println("float -int ");
+	}
+}
+class  OLDemo1
+{
+	public static void main(String... args) 
+	{
+		OLTest1  obj1=new OLTest1();
+		obj1.m1(10,10.0);
+	}
+}

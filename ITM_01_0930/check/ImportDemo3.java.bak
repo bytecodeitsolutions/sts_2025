@@ -1,0 +1,15 @@
+import java.*;
+import java.util.Scanner;
+import java.util.*;
+//import java.util.Date;
+class ImportDemo3 
+{
+	public static void main(String[] args) 
+	{
+		Pattern p1;
+		Date  d1=new Date();
+		System.out.println(d1);
+		Scanner s1=new Scanner(System.in);
+		s1.nextInt();
+	}
+}
