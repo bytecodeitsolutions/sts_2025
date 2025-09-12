@@ -1,0 +1,91 @@
+/*
+    interface introduction
+	interface variable
+	interface methods
+	interface implementations
+	extends vs implements
+	marker interface
+	adapter class
+	functional interface
+	difference between concrete class, abstract class and interface 
+	====================================================================
+	interface
+	
+	class ClassName{
+	
+	}
+	
+	interface InterfaceName{
+	
+	}
+	
+	
+	abstract interface Flipkart
+{
+	void deliverProduct();//public
+	void warranty();
+
+}
+
+class Ekart implements Flipkart
+{
+	public void deliverProduct(){//default
+		System.out.println("product delivered via Ekart");
+	}
+	
+	public void warranty(){
+		
+	}
+}
+abstract class BlueDart implements Flipkart
+{
+	public void deliverProduct(){
+		System.out.println("product delivered via Bluedart");
+	}
+}
+
+class BlueDartChild extends BlueDart
+{
+	public void warranty(){
+		
+	}
+}
+
+
+ 
+	
+	
+	
+*/
+interface I1
+{
+	int  a=10;//static==>method area ==>class loading ==>ekbar==>
+	int  b=20;
+	
+}
+interface I2
+{
+	void sum(int  a,int  b);
+}
+
+class Test
+{
+	int  a;
+	void m1(){
+		
+	}
+}
+class Demo extends Test implements I1,I2{
+	public void sum(int  x,int  y){
+		
+	}
+}
+
+
+class InterfaceDemo1
+{
+	public static void main(String[]  args){
+		
+	}
+}
+
