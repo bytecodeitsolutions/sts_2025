@@ -1,0 +1,7 @@
+static class Outer 
+{
+	protected class Inner
+	{
+		
+	}
+}

@@ -1,0 +1,69 @@
+/*
+   Difference between String and StringBuffer:
+   ----------------------------------------------
+   1. string class object is immutable where as StringBuffer class object is 
+   mutable.
+   
+        String  s1=new String("java");
+		System.out.println("s1="+s1);
+		String  s2=s1.concat("program");
+		System.out.println("s1="+s1);
+		System.out.println("s2="+s2);
+		
+		StringBuffer sb1=new StringBuffer("java");
+		System.out.println("sb1="+sb1);
+		sb1.append("program");
+		System.out.println("sb1="+sb1);
+		
+		
+   2. .equals() method
+   
+   String  s1=new String("java");
+		String  s2=new String("Java");
+		
+		StringBuffer  s3=new StringBuffer("java");
+		StringBuffer  s4=new StringBuffer("java");
+		StringBuffer  s5=s3;
+		
+		System.out.println(s1.equals(s2));//false
+		System.out.println(s3.equals(s5));//true
+		
+		=================================================
+		
+		String  s1="java";
+		s1.concat("program");
+		s1.concat("at itm");
+		System.out.println(s1);
+		
+		StringBuffer sb1=new StringBuffer(s1);
+		sb1.append("program");
+		sb1.append("at itm");
+		System.out.println(sb1);
+		
+		================================================
+		
+		 String  s1="java";
+		 String  s2="java";
+		 
+		 System.out.println("s1==s2=>"+(s1==s2));
+		 
+		 String  s4=s1.concat("program");
+		 String s3="javaprogram";
+		
+		 System.out.println("s3==s4=>"+(s3==s4));//false
+*/
+
+class  StringDemo2
+{
+	public static void main(String[] args) 
+	{
+		final String  s1="java";
+		final String  s2="program";
+		String  s3="java"+"program";
+		String  s4=s1+s2;
+		System.out.println(s3);
+		System.out.println(s4);
+		
+		System.out.println(s4==s3);
+	}
+}
