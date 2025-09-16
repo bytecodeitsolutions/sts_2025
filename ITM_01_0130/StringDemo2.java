@@ -29,6 +29,12 @@
   =====================================
   String  s1="java";
   String  s2=new String("java");
+  =================================================
+  StringBuffer  s2=new StringBuffer("java");
+		StringBuffer  s3=s1;
+		
+		String  s4="java";
+		String  s5="Java";
    
 */
 class StringDemo2 
@@ -36,11 +42,7 @@ class StringDemo2
 	public static void main(String[] args) 
 	{
 		StringBuffer  s1=new StringBuffer("java");
-		StringBuffer  s2=new StringBuffer("java");
-		StringBuffer  s3=s1;
 		
-		String  s4="java";
-		String  s5="Java";
 		System.out.println(s4.equals(s5));
 		
 	}

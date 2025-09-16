@@ -1,0 +1,29 @@
+
+class Account
+{
+	long accountNumber;
+	float  balance;
+	
+		Account  getAccount(int  obj){
+			
+		return  null;
+	}
+}
+class Customer
+{
+	
+}
+class  ReturnTypeDemo2
+{
+	public static void main(String[] args) 
+	{
+		    Customer  a=new Customer();
+			Account	 x=new Account();
+			x.accountNumber=12345L;
+			x.balance=1000.0f;
+			Account  y=x.getAccount(a);
+			System.out.println(y.accountNumber);
+			System.out.println(y.balance);
+
+	}
+}

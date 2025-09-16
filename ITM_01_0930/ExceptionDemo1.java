@@ -1,0 +1,66 @@
+
+/*
+  Exception Handling:
+  -------------------
+  
+  try
+  catch
+  finally
+  throw
+  throws
+  assert-->testing
+  
+  ===========================================
+  What is exception?
+  Real world
+  programming
+  What is the meaning of Exception handling?
+  
+  ==============================================================
+  Any unwanted, unexpected event which disturbs the normal flow of program is called exception.
+  ????
+  
+  SleepingException
+  TyrePunchuredException
+  BombBlastException
+  
+  CustomerNotFoundException
+  InvalidPinException
+  InvalidAgeException
+  ....................
+  
+  *********************************************************************
+  System.out.println("Hello World!-1");
+		System.out.println("Hello World!-2");
+		System.out.println();
+		System.out.println("Hello World!-4");
+		System.out.println("Hello World!-5");
+		
+		//System.out.println(a[0]+a[1]);1020
+		for (String  x:a)
+		{
+			System.out.println(x);
+		}
+*/
+
+class  ExceptionDemo1
+{
+	public static void main(String[] a) 
+	{
+		System.out.println("Hello World!-1");
+		System.out.println("Hello World!-2");
+		try{
+			int  x=Integer.parseInt(a[0]);
+		    int  y=Integer.parseInt(a[1]);
+		    System.out.println(x/y);
+		}
+		catch(Exception e){
+			System.out.println(e.getMessage());
+		}
+		
+		System.out.println("Hello World!-4");
+		System.out.println("Hello World!-5");
+		
+	}
+}
+

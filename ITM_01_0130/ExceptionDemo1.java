@@ -1,0 +1,37 @@
+
+/**
+  System.out.println("Hello World-1!");
+		System.out.println("Hello World-2!");
+		
+		System.out.println();
+		System.out.println("Hello World-4!");
+		System.out.println("Hello World-5!");
+*/
+class ExceptionDemo1 
+{
+	public static void main(String[] args) //throws InterruptedException
+	{
+		    System.out.println("Hello World-1!");
+		    System.out.println("Hello World-2!");
+		
+		try{
+			int  a=Integer.parseInt(args[0]);
+			int  b=Integer.parseInt(args[1]);
+		    System.out.println(a/b);
+			
+		}
+		catch(ArithmeticException e){
+			System.out.println("please enter only non zero value");
+		}
+		catch(NumberFormatException e){
+			System.out.println("please enter only int value");
+		}
+		catch(ArrayIndexOutOfBoundsException e){
+			System.out.println("please enter min 2 values");
+		}
+		  System.out.println("Hello World-3!");
+		  System.out.println("Hello World-4!");
+		
+		
+	}
+}
