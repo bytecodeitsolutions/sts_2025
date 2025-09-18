@@ -1,0 +1,29 @@
+class Test
+{
+	static void m2(){
+		System.out.println("kaun ho tum m2()="+Thread.currentThread().getName() );
+	}
+}
+class MyThread extends Thread
+{
+	public void run(){
+			Test.m2();
+			
+	}
+}
+class  ThreadDemo1
+{
+	static void m1(){
+		System.out.println("kaun ho tum m1()="+Thread.currentThread().getName());
+	}
+	
+	public static void main(String[] args) 
+	{
+		MyThread obj=new MyThread();
+		obj.setName("apna thread");
+		obj.start();
+		ThreadDemo1.m1();
+		
+		
+	}
+}

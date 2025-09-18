@@ -1,0 +1,42 @@
+//Normal -arrange marriage
+@FunctionalInterface
+interface Flipkart
+{
+	void deliver(String productName);
+}
+
+class DTDC implements Flipkart
+{
+	public void deliver(String productName){
+		System.out.println(productName+ " delivered by DTDC ");
+	}
+}
+ 
+ class Test
+ {
+	 public static void m1(String name){
+		System.out.println(name +" delivered by XYZ");
+	 }
+ }
+
+class Demo
+{
+	void m1(String  s){
+		System.out.println(s.toUpperCase());
+	}
+}
+class  NormalInterfaceDemo1
+{
+	public static void main(String[] args) 
+	{
+		List<Integer> marks = Arrays.asList(35, 50, 42, 67, 28, 90, 55);
+
+        System.out.println("Java 8 - Passing Students with Grace Marks:");
+
+        marks.stream().filter(m -> m > 40)         // Step 1: Filter
+              .map(m -> m + 5)             // Step 2: Add grace marks
+             .sorted()                    // Step 3: Sort
+             .forEach(System.out::println); // Step 4: Print
+    
+	}
+}
