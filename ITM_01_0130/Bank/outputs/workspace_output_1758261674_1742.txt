@@ -1,0 +1,56 @@
+Sorting...
+Full Text Search...
+jtreg/oldstable 5.1-b01-2 all
+  Regression Test Harness for the OpenJDK platform
+
+jtreg6/oldstable,oldstable-security 6.2+1-3~deb12u1 all
+  Regression Test Harness for the OpenJDK platform
+
+jtreg7/oldstable,oldstable-security 7.3.1+1-1~deb12u1 all
+  Regression Test Harness for the OpenJDK platform
+
+libasmtools-java/oldstable 7.0-b09-2 all
+  OpenJDK AsmTools
+
+libjax-maven-plugin/oldstable 0.1.8+dfsg-2 all
+  Using the xjc goal with OpenJDK 11+
+
+openjdk-17-dbg/oldstable,oldstable-security 17.0.16+8-1~deb12u1 amd64
+  Java runtime based on OpenJDK (debugging symbols)
+
+openjdk-17-demo/oldstable,oldstable-security 17.0.16+8-1~deb12u1 amd64
+  Java runtime based on OpenJDK (demos and examples)
+
+openjdk-17-doc/oldstable,oldstable-security 17.0.16+8-1~deb12u1 all
+  OpenJDK Development Kit (JDK) documentation
+
+openjdk-17-jdk/oldstable,oldstable-security 17.0.16+8-1~deb12u1 amd64
+  OpenJDK Development Kit (JDK)
+
+openjdk-17-jdk-headless/oldstable,oldstable-security 17.0.16+8-1~deb12u1 amd64
+  OpenJDK Development Kit (JDK) (headless)
+
+openjdk-17-jre/oldstable,oldstable-security 17.0.16+8-1~deb12u1 amd64
+  OpenJDK Java runtime, using Hotspot JIT
+
+openjdk-17-jre-headless/oldstable,oldstable-security 17.0.16+8-1~deb12u1 amd64
+  OpenJDK Java runtime, using Hotspot JIT (headless)
+
+openjdk-17-jre-zero/oldstable,oldstable-security 17.0.16+8-1~deb12u1 amd64
+  Alternative JVM for OpenJDK, using Zero
+
+openjdk-17-source/oldstable,oldstable-security 17.0.16+8-1~deb12u1 all
+  OpenJDK Development Kit (JDK) source files
+
+uwsgi-plugin-jvm-openjdk-17/oldstable 2.0.21-5.1 amd64
+  Java plugin for uWSGI (OpenJDK 17)
+
+uwsgi-plugin-jwsgi-openjdk-17/oldstable 2.0.21-5.1 amd64
+  JWSGI plugin for uWSGI (OpenJDK 17)
+
+uwsgi-plugin-ring-openjdk-17/oldstable 2.0.21-5.1 amd64
+  Closure/Ring plugin for uWSGI (OpenJDK 17)
+
+uwsgi-plugin-servlet-openjdk-17/oldstable 2.0.21-5.1 amd64
+  JWSGI plugin for uWSGI (OpenJDK 17)
+

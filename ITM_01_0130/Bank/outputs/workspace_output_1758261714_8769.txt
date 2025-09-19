@@ -1,0 +1,69 @@
+=== Banking Application Demo ===
+
+1. Creating customers...
+
+2. Creating accounts...
+
+3. ATM Operations...
+
+Alice's withdrawal:
+=== ATM Receipt ===
+Transaction ID: ATM1758261715207
+Type: WITHDRAWAL
+Amount: $500.00
+Status: SUCCESS
+Message: Withdrawal successful
+Time: 2025-09-19T06:01:55.209048300
+==================
+
+Bob's deposit:
+=== ATM Receipt ===
+Transaction ID: ATM1758261715214
+Type: DEPOSIT
+Amount: $1000.00
+Status: SUCCESS
+Message: Deposit successful
+Time: 2025-09-19T06:01:55.214460394
+==================
+
+Alice's balance check:
+=== ATM Receipt ===
+Transaction ID: ATM1758261715214
+Type: BALANCE
+Amount: $4500.00
+Status: SUCCESS
+Message: Balance inquiry successful
+Time: 2025-09-19T06:01:55.214650410
+==================
+
+Transfer from Alice to Bob:
+=== ATM Receipt ===
+Transaction ID: ATM1758261715217
+Type: TRANSFER
+Amount: $1000.00
+Status: SUCCESS
+Message: Transfer successful
+Time: 2025-09-19T06:01:55.217273703
+==================
+
+4. Manager Operations...
+Updating Bob's email...
+Email updated: true
+
+Alice's account transactions:
+WITHDRAWAL: $-500.0 - Cash withdrawal
+TRANSFER_OUT: $-1000.0 - To ACC002: ATM Transfer
+
+5. Verification System Demo...
+PIN verification: true
+Transaction verification: true
+
+6. Final Account Balances:
+Alice's balance: $3500.0
+Bob's balance: $5000.0
+
+7. Bank Statistics:
+Total customers: 2
+Total accounts: 2
+Total ATMs: 1
+Total managers: 1
