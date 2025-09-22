@@ -1,0 +1,72 @@
+/*
+java coding standards:
+----------------------
+
+
+  class name::-> 
+  
+  start with UpperCase
+  ArrayIndexOutOfBoundsException
+  RandomAccess
+  
+  method name::
+  
+  start with-->lower case
+  inner word-->Upper case
+  
+  login(){
+  
+  }
+  
+  setName(){
+  
+  }
+  
+  getName(){
+  
+  }
+  
+  hashCode(){
+  
+  }
+  
+  equals(){
+  
+  }
+  
+  equalsIgnoreCase
+  
+*/
+
+class Student 
+{
+	int rollNumber;
+	void logout(){
+		System.out.println(hashCode()+" logged out successfully");
+	}
+	public static void main(String[] args) 
+	{
+		Student s1=new Student();
+		Student s2=new Student();
+		Student s3=new Student();
+		System.out.println(s1.hashCode());
+		System.out.println(s2.hashCode());
+		System.out.println(s3.hashCode());
+		s1.rollNumber=101;
+		s2.rollNumber=102;
+		s1.login();
+		s2.login();
+		s3.login();
+		s1.logout();
+		s1.logout();
+		s1.logout();
+	}
+}
+
+class Laptop
+{
+	//data
+	//function
+}
+
+Laptop s1=new Laptop();

@@ -1,0 +1,28 @@
+
+
+
+
+class Account
+{
+	int  accNo;
+	double balance;
+	
+}
+class Customer
+{
+	void getAccount(Account  x){
+		System.out.println("x="+x.accNo);
+		System.out.println("x="+x.balance);
+	}
+}
+class Car 
+{
+	public static void main(String[] args) 
+	{
+		Customer  c1=new Customer();
+		Account   obj=new Account();
+		obj.accNo=112233;
+		obj.balance=10000;
+		c1.getAccount(obj);
+	}
+}

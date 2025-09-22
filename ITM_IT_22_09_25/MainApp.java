@@ -1,0 +1,30 @@
+class Tiffin
+{
+	String item1;
+	String item2;
+	String item3;
+	String item4;
+}
+class Friend
+{
+	Tiffin openTiffin(Tiffin t1){
+		System.out.println(t1.item1);
+		System.out.println(t1.item2);
+		System.out.println(t1.item3);
+		System.out.println(t1.item4);
+		return t1;
+	}
+}
+class MainApp 
+{
+	public static void main(String[] args) 
+	{
+		Friend  f1=new Friend();
+		Tiffin  obj=new Tiffin();
+		obj.item1="Paneer butter masala";
+		obj.item2="puri";
+		obj.item3="pulaw";
+		obj.item4="rayta";
+		f1.openTiffin(obj);
+	}
+}
