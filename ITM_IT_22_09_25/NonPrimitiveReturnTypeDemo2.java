@@ -1,0 +1,34 @@
+class Kutta
+{
+	String  name;
+	int  age;
+	
+	void bark(){
+		System.out.println(name +" barking");
+	}
+}
+class Pilla
+{
+	
+}
+class Customer
+{
+	static Kutta  getKutta(){
+		Kutta  k1=new Kutta();
+		k1.name="Rajat Sharma";
+		k1.age=10;
+		
+		Pilla  p1=new Pilla();
+		return k1;
+	}
+}
+class NonPrimitiveReturnTypeDemo2 
+{
+	public static void main(String[] args) 
+	{
+		Kutta a=Customer.getKutta();
+		System.out.println(a.name);
+		System.out.println(a.age);
+		a.bark();
+	}
+}

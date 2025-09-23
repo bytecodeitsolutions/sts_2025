@@ -1,0 +1,22 @@
+class Bottle
+{
+	void openBottle(){ //non static method declaration
+		System.out.println(hashCode() +" bottle opened");
+	}
+	
+	void closeBottle(){
+		System.out.println(hashCode() +" bottle closed");
+	}
+}
+class MethodDemo1 
+{
+	public static void main(String[] args) 
+	{
+		Bottle  b1=new Bottle();//object creation syntax
+		Bottle  b2=new Bottle();
+		Bottle  b3=new Bottle();
+		Bottle  b4=new Bottle();
+		b1.openBottle();//method calling
+		b1.closeBottle();
+	}
+}

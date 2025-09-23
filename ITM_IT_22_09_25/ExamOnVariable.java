@@ -1,0 +1,25 @@
+class Test
+{
+	int  a=10;
+	
+	static void  m1(){
+		ExamOnVariable.t2.a++;
+		System.out.println("The value of a="+ExamOnVariable.t2.a);
+	}
+}
+class ExamOnVariable 
+{
+	static Test  t2=null;
+	public static void main(String[] args) 
+	{
+		ExamOnVariable.t2=new Test();
+		Test  t1=new Test();
+		Test  t3=new Test();
+		t2.a=200;
+		t1.m1();
+		Test.m1();
+		t3.m1();
+		int  a=0;
+		System.out.println("hello "+a);
+	}
+}

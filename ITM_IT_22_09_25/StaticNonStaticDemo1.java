@@ -16,7 +16,9 @@ class StaticNonStaticDemo1
 		Car  c2=new Car();
 		
 		c1.carId=1111;
-		c1.brandName="Hyunda";
+		c2.carId=2222;
+		c1.brandName="Hyundi";
+		c2.brandName="Maruti suzuki";
 		
 		c1.displayCarData();
 		c2.displayCarData();

@@ -1,27 +1,13 @@
-
-
-
-
-class Account
+class  Car
 {
-	int  accNo;
-	double balance;
+	//data-how to define data
 	
-}
-class Customer
-{
-	void getAccount(Account  x){
-		System.out.println("x="+x.balance);
+	int  carId;//non static -->why
+	static String brandName;//-->static -->why
+	
+	void  start(){
+		int  engineNumber;//local ->within method or block or constructor 
+		//or as parameter
 	}
-}
-class Car 
-{
-	public static void main(String[] args) 
-	{
-		Customer  c1=new Customer();
-		Account   obj=new Account();
-		obj.accNo=112233;
-		obj.balance=10000;
-		c1.getAccount(obj);
-	}
+	
 }
