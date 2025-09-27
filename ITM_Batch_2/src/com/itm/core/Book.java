@@ -1,0 +1,47 @@
+package com.itm.core;
+
+public class Book {
+	private int bookId;
+	private String authorName;
+	private double price;
+	private String subject;
+
+	public Book(int bookId, String authorName, double price, String subject) {
+		this.bookId = bookId;
+		this.authorName = authorName;
+		this.price = price;
+		this.subject = subject;
+	}
+
+	public int getBookId() {
+		return bookId;
+	}
+
+	public void setBookId(int bookId) {
+		this.bookId = bookId;
+	}
+
+	public String getAuthorName() {
+		return authorName;
+	}
+
+	public void setAuthorName(String authorName) {
+		this.authorName = authorName;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+}

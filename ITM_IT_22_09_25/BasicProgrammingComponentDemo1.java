@@ -1,0 +1,45 @@
+/*
+   Bilkul hi basic se:-
+   jitna likh rha hu , aplog bhi likho aur sath me diagram bnao
+   -------------------------------------------------------------
+*/
+
+
+
+class  Employee //mai ek employee class (design / template / model )bna rha hu 
+{
+	static String  companyName; //static variable ->companyName bna rhe hai //kyoki ye data
+	 //(variable) sare employee object k liye same hoga
+	 
+	 String employeeName; //non static variable ->employeeName bna rhe hai //kyoki ye data sare //hi  employee k liye different hoga
+	 
+	static void printCompanyName(){//ek static method ->printCompanyName() rha //hu jisko memory ek
+		//bar milegi aur jisko khi bhi class name se ya object reference //variable se access kiya jayega
+		
+		System.out.println("Company name is="+companyName);//ye ek print //statement hai kisi bhi type k data ko print krne k liye
+		
+	}
+	
+	void  printEmployeeName(){//mai ek non static method "printEmployeeName"
+		//bna rha hu jo object reference variable se access(call) hoga
+		System.out.println("Employee name is="+employeeName);
+		
+	}
+}
+
+class BasicProgrammingComponentDemo1
+{
+	//bina main method ka program execute nhi hoga->compile hoga but run nhi 
+	//hoga
+	
+	//main method ko declare kr rhe hai -->ab kya hoga-->run bhi hoga
+	public static void main(String[] args){
+		//mujhe static method krna hai-->kaise call hoga-->jis class se call 
+		//krna chahte ho uske class name se call hoga kyoki static hai
+		//aur object reference se bhi call ho skta hai
+		
+		printCompanyName();
+	}
+}
+
+

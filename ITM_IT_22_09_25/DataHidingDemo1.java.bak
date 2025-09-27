@@ -1,0 +1,35 @@
+/*
+    
+*/
+class Account
+{
+	private double balance;
+	
+	public double getBal(){
+		
+		return balance;
+	}
+	
+	public void setBalance(double balance){
+		this.balance=balance;
+	}
+	
+}
+class GPay
+{
+	void getBalance(){
+		Account  a1=new Account();
+		//a1.balance=100;
+		a1.setBalance(1000);
+		double d=a1.getBal();
+		System.out.println("balance="+d);
+	}
+}
+class  DataHidingDemo1
+{
+	public static void main(String[] args) 
+	{
+		GPay  p=new GPay();
+		p.getBalance();
+	}
+}

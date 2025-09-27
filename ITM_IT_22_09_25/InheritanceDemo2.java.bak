@@ -1,0 +1,8 @@
+
+class InheritanceDemo2 extends InheritanceDemo2
+{
+	public static void main(String[] args) 
+	{
+		
+	}
+}

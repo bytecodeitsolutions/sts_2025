@@ -1,0 +1,25 @@
+class Employee
+{
+	int eId;
+	String name;
+	
+	Employee(int eId,String name){
+		this.eId=eId;
+		this.name=name;
+	}
+	
+	public String toString(){
+		return "[Employee id="+eId +" name ="+name +"]";
+	}
+}
+
+class  PolyDemo1
+{
+	public static void main(String[] args) 
+	{
+		Employee  e1=new Employee(101,"Raja");
+		Employee  e2=new Employee(102,"Rani");
+		//System.out.println(e1);
+		//System.out.println(e2);
+	}
+}

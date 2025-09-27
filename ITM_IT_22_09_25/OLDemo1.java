@@ -1,0 +1,101 @@
+/*
+Overloading:
+  Case-1:
+    Automatic promotions in overloading:
+	------------------------------------
+	byte-->short-->int-->long--->float--->double
+	       char--->int
+		   
+  Case-2: Non primitive
+     Parent--Child===exist
+	 common value--->child
+	 ref--->
+	 
+  Case-3:
+  
+     non primitive
+	 there is no parent child relation
+	 
+ Case-4:
+ 
+ Case-5:
+ 
+ Case-6:
+ 
+   Compiler--->based on reference
+	 
+  *********************************************************************
+  
+  Overriding:
+  -----------
+  Why???
+  
+  if child is not satisfied with parent class method implementation then child is allowed to define that same method with same name and same parameter is called overriding.
+  
+  
+  Case-1:
+  -------
+  
+  covarient return type:
+  ---------------------
+  
+  method name==>same
+  parameter====>same
+  
+  return type===??
+  access modifiers===??
+  
+  ------------------------------------------------------------------------
+*/
+
+
+class Parent
+{
+	void marry(){
+		System.out.println("we should according to parent");
+	}
+	void drink(){
+		System.out.println("we should drink water and milk");
+	}
+	void smoke(){
+		System.out.println("we should not smoke");
+	}
+	void property(){
+		System.out.println("1000 cr rupees , 5000 acre land");
+	}
+}
+class Child1 extends Parent
+{
+	
+}
+
+class Child2 extends Parent
+{
+	void marry(){
+		System.out.println("I will marry with my friend");
+	}
+	void drink(){
+		System.out.println("we should drink water and RUM");
+	}
+}
+class Child3 extends Parent
+{
+	void drink(){
+		System.out.println("we should drink water , milk and Beer");
+	}
+	void smoke(){
+		System.out.println("we should  smoke cigerate and cigar");
+	}
+}
+
+class  OLDemo1
+{
+	public static void main(String[] args) 
+	{
+		Child3  c1=new Child3();
+		c1.marry();
+		c1.smoke();
+		c1.drink();
+		c1.property();
+	}
+}

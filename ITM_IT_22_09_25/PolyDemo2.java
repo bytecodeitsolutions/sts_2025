@@ -1,0 +1,26 @@
+class PolyDemo2 
+{
+	public static void main(String[] args) 
+	{
+		String s1=new String("java");
+		String s2=new String("java");
+		System.out.println("s1="+s1);
+		System.out.println("s2="+s2);
+		
+		StringBuffer s3=new StringBuffer("java");
+		StringBuffer s4=new StringBuffer("java");
+		System.out.println("s3="+s3);
+		System.out.println("s4="+s4);
+		
+		System.out.println("===========check behaviour of string ======");
+		
+		if (s3.equals(s4))
+		{
+			System.out.println("tumhara college kal bnd hai");
+		}
+		else{
+			System.out.println("tumhara college kal bnd nhi hai");
+		}
+		
+	}
+}

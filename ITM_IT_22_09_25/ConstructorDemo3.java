@@ -1,0 +1,38 @@
+//default contructor
+//this() | super()==>1 .2. 3.
+
+class Test1
+{
+	Test1(int  a){
+		System.out.println("Test1-int");
+	}
+	Test1(){
+		System.out.println("Test1 0");
+	}
+	Test1(int a,String s){
+		System.out.println("Test1 int-String");
+	}
+}
+class Test2 extends Test1
+{
+	Test2(){
+		super(10);
+		System.out.println("Test2-0 " +hashCode());
+	}
+	Test2(int a){
+		super();
+		System.out.println("Test2-int "+hashCode());
+	}
+	Test2(int a,int b){
+		super(1,"java");
+		System.out.println("Test2-int-int "+hashCode());
+	}
+}
+public class  ConstructorDemo3
+{
+	public static void main(String[] a){
+		Test2  t1=new Test2();
+		Test2  t2=new Test2(10);
+		Test2  t3=new Test2(10,20);
+	}
+}
