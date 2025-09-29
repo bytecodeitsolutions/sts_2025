@@ -1,0 +1,28 @@
+class ExceptionDemo3 
+{
+	public static void main(String[] args) 
+	{
+		int  a=0;
+		int  b=0;
+		System.out.println("hello");
+		try{
+			 a=Integer.parseInt(args[0]);
+			 b=Integer.parseInt(args[1]);
+			 System.out.println(a/b);
+		}
+		
+		catch(ArithmeticException e){
+			e.printStackTrace();
+		}
+		catch(NumberFormatException e){
+			e.printStackTrace();
+		}
+		catch(ArrayIndexOutOfBoundsException e){
+			e.printStackTrace();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		System.out.println("hi");
+	}
+}

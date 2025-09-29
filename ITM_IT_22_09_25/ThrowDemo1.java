@@ -1,0 +1,30 @@
+class InvalidRollNumberException extends RuntimeException
+{
+	InvalidRollNumberException(String msg){
+		super(msg);
+	}
+}
+class ThrowDemo1 
+{
+	public static void main(String[] args) throws InvalidRollNumberException
+	{
+		InvalidRollNumberException  obj1=null;
+		InvalidRollNumberException  obj= new InvalidRollNumberException("roll number shi nhi hai");
+		 throw obj1;
+	}
+}
+
+
+/*
+    C:\Users\Kayum\Documents\GitHub\sts_2025\ITM_IT_22_09_25>java ThrowDemo1
+	System.out.println(10/0);
+	========================================================================
+	
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+        at ThrowDemo1.main(ThrowDemo1.java:5)
+================================================================
+throw new ArithmeticException("/ by zero");		
+		
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+        at ThrowDemo1.main(ThrowDemo1.java:5)
+*/

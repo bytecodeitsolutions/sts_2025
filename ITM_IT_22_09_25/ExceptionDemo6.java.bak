@@ -1,0 +1,12 @@
+class ExceptionDemo6 
+{
+	public static void main(String[] args) 
+	{
+		try{
+		  System.out.println("Hello World!");
+		  Thread.sleep(1000);
+		}catch(InterruptedException ae){
+			
+		}
+	}
+}
