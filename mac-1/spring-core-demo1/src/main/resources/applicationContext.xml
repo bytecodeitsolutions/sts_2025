@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Define Engine Bean -->
+    <bean id="engineBean" class="com.bytecode.Engine">
+        <property name="type" value="V8 Turbo"/>
+        <property name="horsepower" value="450"/>
+      
+    </bean>
+
+    <!-- Define Car Bean with dependency injection -->
+    <bean id="carBean" class="com.bytecode.Car">
+        <property name="model" value="Mustang GT"/>
+        <property name="engine" ref="engineBean"/>
+    </bean>
+
+</beans>

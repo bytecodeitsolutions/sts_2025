@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="fr" class="com.itm.beans.Frequency">
+    <property name="freqNumber" value="98.7"/>
+    </bean>
+    
+    <bean id="radio" class="com.itm.beans.Radio" scope="singleton">
+     <property name="songName" value="sanam re"></property>
+     <property name="frequency" ref="fr"/>
+     <constructor-arg name="frequency" ref="fr"/>
+    </bean>
+
+</beans>
