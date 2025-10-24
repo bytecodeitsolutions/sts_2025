@@ -39,7 +39,7 @@ public class ArrayListDemo1 {
 		
 		al.forEach(System.out::println);
 		
-		//al.stream().filter(x->x.getAge()==3).forEach(System.out::println);
+		al.stream().filter(x->x.getAge()==7).forEach(System.out::println);
 	}
 
 }

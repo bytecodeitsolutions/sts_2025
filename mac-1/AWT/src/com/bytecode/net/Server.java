@@ -7,7 +7,7 @@ public class Server {
         ServerSocket serverSocket = null;
         Socket socket = null;
         try {
-            // Create server socket on port 5000
+            // Create server socket on port 6000
             serverSocket = new ServerSocket(6000);
             System.out.println("Server started. Waiting for client...");
 

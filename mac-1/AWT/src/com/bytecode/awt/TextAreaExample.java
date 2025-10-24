@@ -3,6 +3,7 @@ package com.bytecode.awt;
 import java.awt.*;
 import java.awt.event.*;
 
+
 public class TextAreaExample {
     public static void main(String[] args) {
         // Create a frame
@@ -29,20 +30,16 @@ public class TextAreaExample {
         frame.setSize(400, 300);
         frame.setLayout(null);
         frame.setVisible(true);
-
+        
         // Button click event
         button.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                String text = textArea.getText();
-                outputLabel.setText("You wrote: " + text);
-            }
-        });
-
-        // Window closing event
-        frame.addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent we) {
-                frame.dispose();
-            }
-        });
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				String text = textArea.getText();
+	             outputLabel.setText("You wrote: " + text);
+			}
+		});
+ 
+        
     }
 }
